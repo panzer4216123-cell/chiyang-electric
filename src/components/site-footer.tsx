@@ -28,6 +28,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/about" className="no-underline hover:text-seal">
+                關於啟揚
+              </Link>
+            </li>
+            <li>
               <Link to="/cases" className="no-underline hover:text-seal">
                 工程現場
               </Link>

@@ -70,6 +70,59 @@ export const STORY = {
   body: "這不是樣品屋。是已經住進去的透天：樓梯窄、位置怪、地板不能大挖。先看這個家怎麼住，能裝才說怎麼裝。裝完，保養也找我們。",
 } as const;
 
+export const ABOUT = {
+  kicker: "啟揚怎麼來的",
+  title: "先會裝，才開了這家公司。",
+  lead: "峰哥喜歡裝電梯。為了幫更多已經住進去的家，2016 年成立啟揚。自己看現場、自己裝。",
+  stages: [
+    {
+      n: "01",
+      title: "峰哥先裝",
+      body: "從現場出來的。難裝、位置怪、別家不接的，他先看。",
+    },
+    {
+      n: "02",
+      title: "業務與工務成形",
+      body: "人多了，洪大姐把客人接進來；田大哥帶工務把現場做完。不是一個人扛全場。",
+    },
+    {
+      n: "03",
+      title: "專心做客製化的家",
+      body: "舊透天、有限空間、裝完也養。目標是把這條路走穩，不跟大廠搶大樓標案。",
+    },
+  ],
+} as const;
+
+export const PEOPLE = [
+  {
+    id: "feng",
+    name: "峰哥",
+    role: "創辦人",
+    bio: "現場出來的。喜歡把電梯裝進已經住著的家。",
+    image: "/images/team/IMG_3584.webp",
+  },
+  {
+    id: "hung",
+    name: "洪大姐",
+    role: "業務",
+    bio: "客人怎麼問、現場怎麼接，她把這條線接起來。",
+    image: "",
+  },
+  {
+    id: "tian",
+    name: "田大哥",
+    role: "工務",
+    bio: "能不能裝、怎麼裝完，工務看現場。",
+    image: "",
+  },
+] as const;
+
+export const TEAM_PHOTOS = [
+  { src: "/images/team/IMG_3556.webp", alt: "啟揚團隊" },
+  { src: "/images/team/IMG_3557.webp", alt: "啟揚團隊合影" },
+  { src: "/images/team/IMG_3579.webp", alt: "開會" },
+] as const;
+
 export const SURVEY = [
   "幾樓到幾樓",
   "梯放樓梯中間、旁邊，還是室外",

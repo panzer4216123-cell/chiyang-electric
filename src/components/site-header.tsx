@@ -6,6 +6,7 @@ import { SITE } from "@/lib/site";
 
 const NAV = [
   { to: "/", label: "首頁" },
+  { to: "/about", label: "關於啟揚" },
   { to: "/cases", label: "工程現場" },
   { to: "/equipment", label: "設備型錄" },
   { to: "/contact", label: "聯絡評估" },

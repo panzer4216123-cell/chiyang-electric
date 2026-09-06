@@ -55,6 +55,9 @@ function Home() {
           <p className="kicker">{STORY.kicker}</p>
           <h2 className="display mt-3 text-3xl sm:text-4xl">{STORY.title}</h2>
           <p className="mt-5 max-w-xl text-lg leading-relaxed">{STORY.body}</p>
+          <Link to="/about" className="mt-6 inline-block text-base no-underline hover:text-seal">
+            啟揚怎麼來的 →
+          </Link>
         </div>
       </section>
 
