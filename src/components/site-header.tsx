@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { FacebookMark } from "@/components/facebook-mark";
+import { InstagramMark } from "@/components/instagram-mark";
 import { SITE } from "@/lib/site";
 
 const NAV = [
@@ -50,8 +51,15 @@ export function SiteHeader() {
             <span className="text-base">臉書</span>
           </a>
           {SITE.instagram ? (
-            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="text-base tracking-wide no-underline hover:text-seal">
-              IG
+            <a
+              href={SITE.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 no-underline hover:opacity-80"
+              aria-label="啟揚機電 Instagram"
+            >
+              <InstagramMark />
+              <span className="text-base">IG</span>
             </a>
           ) : null}
           <a href={`tel:${SITE.phoneTel}`} className="text-base tracking-wide no-underline">
@@ -98,8 +106,14 @@ export function SiteHeader() {
               臉書日常
             </a>
             {SITE.instagram ? (
-              <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="border-b border-border py-3 no-underline">
-                Instagram 施工
+              <a
+                href={SITE.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border-b border-border py-3 no-underline"
+              >
+                <InstagramMark />
+                Instagram
               </a>
             ) : null}
             <a

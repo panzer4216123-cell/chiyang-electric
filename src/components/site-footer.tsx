@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { FacebookMark } from "@/components/facebook-mark";
+import { InstagramMark } from "@/components/instagram-mark";
 import { LOCATIONS, SITE, SLOGANS } from "@/lib/site";
 
 export function SiteFooter() {
@@ -54,8 +55,14 @@ export function SiteFooter() {
             </li>
             {SITE.instagram ? (
               <li>
-                <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                  Instagram 施工
+                <a
+                  href={SITE.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 no-underline hover:opacity-90"
+                >
+                  <InstagramMark className="h-5 w-5" />
+                  Instagram
                 </a>
               </li>
             ) : null}

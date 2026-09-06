@@ -15,7 +15,7 @@ export const SITE = {
   mapsUrl: mapsQuery("高雄市大社區民族路15-10號"),
   formUrl: "https://forms.gle/uCqMDaTfuiHCuHvw8",
   facebook: "https://www.facebook.com/profile.php?id=100064054864315",
-  instagram: "",
+  instagram: "https://www.instagram.com/chiyang.elevator/",
   reel: "https://www.facebook.com/reel/1033082013055204",
 } as const;
 

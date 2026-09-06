@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Couplet } from "@/components/couplet";
 import { FacebookMark } from "@/components/facebook-mark";
+import { InstagramMark } from "@/components/instagram-mark";
 import { LOCATIONS, SITE, SLOGANS, SURVEY } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
@@ -109,8 +110,11 @@ function ContactPage() {
             </li>
             {SITE.instagram ? (
               <li>
-                <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="flex justify-between py-4 no-underline">
-                  <span>Instagram 施工</span>
+                <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-4 no-underline">
+                  <span className="inline-flex items-center gap-3">
+                    <InstagramMark />
+                    Instagram
+                  </span>
                   <span className="text-seal">開</span>
                 </a>
               </li>
