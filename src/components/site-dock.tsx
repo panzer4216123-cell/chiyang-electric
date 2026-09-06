@@ -7,7 +7,7 @@ export function SiteDock() {
       <a href={`tel:${SITE.phoneTel}`}>打電話</a>
       <Link to="/cases">看現場</Link>
       <Link to="/contact" hash="lead" className="dock-go">
-        估自家
+        能不能裝
       </Link>
     </nav>
   );
