@@ -1,12 +1,12 @@
 # 給 Grok Bot：啟揚現行站
 
-這份 repo 是現行口徑。ChatGPT 的 chatgpt.site（「啟揚來幫忙」）作廂。
+這份 repo 是現行口徑。ChatGPT 的 chatgpt.site（「啟揚來幫忙」）作廢。
 
 ## 已定，不要重開
 
 - 電梯不好裝，啟揚就來裝。
 - 電梯不好養，啟揚就來養。
-- 「地板不能挖，啟揚有辦法」可當痛點句測試，不當品牌憲法。
+- 地板不能挖，啟揚有辦法。（痛點句。接：以現勘為準，不是每戶都能少動地板。）
 
 品類：家用電梯／老屋透天加裝。
 可講：空間窄、別家不接、少動地板、怕漏水、長輩爬樓。深度以現勘為準。
@@ -26,16 +26,14 @@
 電話 07-353-8504  
 需求表 https://forms.gle/uCqMDaTfuiHCuHvw8
 
-改網站：改 `src/lib/site.ts`（文案）與 `src/routes/`（頁面）。不要每輪重建定位。
+改網站：改 `src/lib/site.ts`（文案）與 `src/routes/`（頁面）。峰哥看到的頁改 `docs/index.html`，並同步 `panzer4216123-cell.github.io`。不要每輪重建定位。
 
 ## 這個 repo 現在有什麼
 
+- `AGENTS.md` Codex 工作憲章
 - `src/lib/site.ts` 口號、痛點、FAQ、案例、電話
-- `src/routes/index.tsx` 首頁
-- `src/routes/cases.tsx` 工程現場
-- `src/routes/contact.tsx` 聯絡
+- `src/routes/` 頁面底稿
+- `docs/index.html` 峰哥可點的靜態頁
 - `src/components/` 對聯、頁首頁尾、裁切框
 - `src/styles.css` 印泥紅／對聯直書
 - `public/` logo、工程照
-
-完整可跑的框架仍在 Grok 這則對話的預覽。改文案改 site.ts 與 routes 即可。
