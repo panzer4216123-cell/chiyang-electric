@@ -64,6 +64,14 @@ export const SLOGANS = {
   floor: { line1: "地板不能挖，", line2: "啟揚有辦法。" },
 } as const;
 
+export const SURVEY = [
+  "幾樓到幾樓",
+  "梯放樓梯中間、旁邊，還是室外",
+  "一次幾個人，要不要坐輪椅或載貨",
+  "門要開哪一邊，能不能雙向",
+  "地板、防水能不能動，能動多少",
+] as const;
+
 export const PAINS = [
   {
     id: "narrow",
