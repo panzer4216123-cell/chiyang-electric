@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { FacebookMark } from "@/components/facebook-mark";
 import { LOCATIONS, SITE, SLOGANS } from "@/lib/site";
 
 export function SiteFooter() {
@@ -41,8 +42,14 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                臉書日常
+              <a
+                href={SITE.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 no-underline hover:opacity-90"
+              >
+                <FacebookMark className="h-5 w-5" />
+                臉書
               </a>
             </li>
             {SITE.instagram ? (
@@ -57,21 +64,27 @@ export function SiteFooter() {
         <div>
           <p className="kicker text-fg-on-ink/40">據點</p>
           <ul className="mt-4 space-y-4 text-base text-fg-on-ink/90">
-            {LOCATIONS.map((loc) => (
-              <li key={loc.id}>
-                <p>{loc.name}</p>
-                <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                  {loc.address}
+            <li>
+              <p>{LOCATIONS[0].name}</p>
+              <a href={LOCATIONS[0].mapsUrl} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
+                {LOCATIONS[0].address}
+              </a>
+              <p>
+                <a href={`tel:${LOCATIONS[0].phoneTel}`} className="no-underline hover:text-seal">
+                  {LOCATIONS[0].phoneDisplay}
                 </a>
-                {loc.phoneDisplay ? (
-                  <p>
-                    <a href={`tel:${loc.phoneTel}`} className="no-underline hover:text-seal">
-                      {loc.phoneDisplay}
-                    </a>
-                  </p>
-                ) : null}
-              </li>
-            ))}
+              </p>
+              <p>
+                <a href={`tel:${SITE.freePhoneTel}`} className="no-underline hover:text-seal">
+                  免付費 {SITE.freePhoneDisplay}
+                </a>
+              </p>
+            </li>
+            <li>
+              <Link to="/contact" className="no-underline hover:text-seal">
+                台南、台中、桃園據點 →
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

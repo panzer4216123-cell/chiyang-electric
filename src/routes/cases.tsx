@@ -17,15 +17,8 @@ function CasesPage() {
           <p className="kicker">工程檔案</p>
           <h1 className="display mt-3 max-w-2xl text-4xl sm:text-5xl">現場看得到，才拿得出去跟屋主講</h1>
           <p className="mt-4 max-w-xl text-base text-fg-muted">
-            匿名編號。只寫畫面看得見的。新案持續補上，不把沒有照片的案子寫成已經在網站上。
+            舊站工程實績 {CASES.length} 案。匿名編號。只寫畫面看得見的。新案持續補上。
           </p>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {CASES.map((item) => (
-              <a key={item.id} href={`#${item.id}`} className="chop no-underline">
-                {item.id}
-              </a>
-            ))}
-          </div>
         </div>
       </section>
       <section className="shell mt-10 columns-1 gap-8 sm:columns-2 lg:columns-3">
@@ -43,10 +36,7 @@ function CasesPage() {
               />
             </CropFrame>
             <div className="mt-3 flex items-start justify-between gap-3">
-              <div>
-                <h2 className="font-display text-xl">{item.title}</h2>
-                <p className="mt-1 text-base text-fg-muted">{item.note}</p>
-              </div>
+              <h2 className="font-display text-xl">{item.title}</h2>
               <span className="chop shrink-0">{item.id}</span>
             </div>
           </article>

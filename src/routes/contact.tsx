@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Couplet } from "@/components/couplet";
+import { FacebookMark } from "@/components/facebook-mark";
 import { LOCATIONS, SITE, SLOGANS, SURVEY } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
@@ -98,8 +99,11 @@ function ContactPage() {
               </Link>
             </li>
             <li>
-              <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="flex justify-between py-4 no-underline">
-                <span>臉書日常</span>
+              <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-4 no-underline">
+                <span className="inline-flex items-center gap-3">
+                  <FacebookMark />
+                  臉書日常
+                </span>
                 <span className="text-seal">開</span>
               </a>
             </li>

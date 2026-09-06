@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { FacebookMark } from "@/components/facebook-mark";
 import { SITE } from "@/lib/site";
 
 const NAV = [
@@ -38,8 +39,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="text-base tracking-wide no-underline hover:text-seal">
-            臉書
+          <a
+            href={SITE.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 no-underline hover:opacity-80"
+            aria-label="啟揚機電臉書"
+          >
+            <FacebookMark />
+            <span className="text-base">臉書</span>
           </a>
           {SITE.instagram ? (
             <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="text-base tracking-wide no-underline hover:text-seal">
@@ -56,7 +64,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex h-11 min-w-11 items-center justify-center border border-line px-3 text-sm tracking-widest md:hidden"
+          className="inline-flex h-11 min-w-11 items-center justify-center border border-line px-3 text-base md:hidden"
           aria-label={open ? "關閉選單" : "開啟選單"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -71,7 +79,7 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="border-b border-border py-3 tracking-widest no-underline"
+                className="border-b border-border py-3 text-base no-underline"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -80,7 +88,13 @@ export function SiteHeader() {
             <a href={`tel:${SITE.phoneTel}`} className="border-b border-border py-3 no-underline">
               {SITE.phoneDisplay}
             </a>
-            <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="border-b border-border py-3 no-underline">
+            <a
+              href={SITE.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border-b border-border py-3 no-underline"
+            >
+              <FacebookMark />
               臉書日常
             </a>
             {SITE.instagram ? (
