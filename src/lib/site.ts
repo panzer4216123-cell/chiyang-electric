@@ -64,6 +64,12 @@ export const SLOGANS = {
   floor: { line1: "地板不能挖，", line2: "啟揚有辦法。" },
 } as const;
 
+export const STORY = {
+  kicker: "為什麼找啟揚",
+  title: "別家說裝不了的家，我們來看現場。",
+  body: "這不是樣品屋。是已經住進去的透天：樓梯窄、位置怪、地板不能大挖。先看這個家怎麼住，能裝才說怎麼裝。裝完，保養也找我們。",
+} as const;
+
 export const SURVEY = [
   "幾樓到幾樓",
   "梯放樓梯中間、旁邊，還是室外",

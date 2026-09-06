@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Couplet } from "@/components/couplet";
 import { CropFrame } from "@/components/crop-frame";
-import { CASES, FAQS, PAINS, SITE, SLOGANS, STEPS, MAINTAIN } from "@/lib/site";
+import { CASES, SITE, SLOGANS, STEPS, STORY } from "@/lib/site";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -50,11 +50,13 @@ function Home() {
         </div>
       </section>
 
-      <div className="overflow-hidden border-b border-line py-3">
-        <p className="kicker whitespace-nowrap text-center">
-          舊透天　／　空間太窄　／　別家不接　／　地板不能大挖　／　裝完也養
-        </p>
-      </div>
+      <section className="border-b border-line py-16">
+        <div className="shell max-w-3xl">
+          <p className="kicker">{STORY.kicker}</p>
+          <h2 className="display mt-3 text-3xl sm:text-4xl">{STORY.title}</h2>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed">{STORY.body}</p>
+        </div>
+      </section>
 
       <section className="bg-bg-ink text-fg-on-ink">
         <div className="shell grid items-end gap-10 py-14 lg:grid-cols-[1fr_auto]">
@@ -77,19 +79,13 @@ function Home() {
 
       <section className="border-b border-line py-16">
         <div className="shell">
-          <p className="hengpi">{SLOGANS.floor.line1}{SLOGANS.floor.line2}</p>
-          <p className="mt-4 max-w-lg text-base text-fg-muted">
-            怕動防水、怕挖太深、怕把家拆掉。深度與做法以現勘為準，這裡不寫死規格。
+          <p className="hengpi">
+            {SLOGANS.floor.line1}
+            {SLOGANS.floor.line2}
           </p>
-          <div className="mt-10 grid border-t border-l border-line sm:grid-cols-2">
-            {PAINS.map((item, i) => (
-              <article key={item.id} className="border-b border-r border-line p-6 sm:p-8">
-                <p className="font-display text-3xl text-seal">{String(i + 1).padStart(2, "0")}</p>
-                <h3 className="mt-4 font-display text-2xl">{item.title}</h3>
-                <p className="mt-3 text-base text-fg-muted">{item.body}</p>
-              </article>
-            ))}
-          </div>
+          <p className="mt-4 max-w-lg text-base text-fg-muted">
+            怕動防水、怕挖太深、怕把家拆掉。深度與做法以現勘為準。不是每戶都能少動地板。
+          </p>
         </div>
       </section>
 
@@ -99,8 +95,8 @@ function Home() {
             <p className="kicker">工程現場</p>
             <h2 className="display mt-3 text-3xl sm:text-4xl">不是樣品屋</h2>
           </div>
-          <Link to="/cases" className="text-base tracking-widest no-underline hover:text-seal">
-            全部照片 →
+          <Link to="/cases" className="btn btn-ghost">
+            全部照片
           </Link>
         </div>
         <div className="film pl-4 md:pl-[max(1rem,calc((100vw-1180px)/2+1rem))]">
@@ -116,28 +112,10 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-t border-line py-16">
-        <div className="shell">
-          <p className="kicker">電梯保養</p>
-          <h2 className="display mt-3 text-3xl sm:text-4xl">各廠牌都養。裝完也找我們。</h2>
-          <p className="mt-4 max-w-xl text-base text-fg-muted">
-            故障通知後派人到場。保養內容以合約為準。
-          </p>
-          <div className="mt-10 grid border-t border-l border-line sm:grid-cols-2 lg:grid-cols-3">
-            {MAINTAIN.map((item) => (
-              <article key={item.title} className="border-b border-r border-line p-6">
-                <h3 className="font-display text-2xl">{item.title}</h3>
-                <p className="mt-3 text-base text-fg-muted">{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="border-y border-line py-16">
         <div className="shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="kicker">流程</p>
+            <p className="kicker">怎麼開始</p>
             <h2 className="display mt-3 text-3xl">四步，先說能不能裝</h2>
           </div>
           <ol className="divide-y divide-line border-y border-line">
@@ -154,32 +132,11 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-16" id="faq">
-        <div className="shell max-w-3xl">
-          <p className="kicker">屋主問</p>
-          <h2 className="display mt-3 text-3xl">先問這幾個</h2>
-          <div className="mt-8 border-y border-line">
-            {FAQS.map((item) => (
-              <details key={item.id} className="group border-b border-line py-4 last:border-b-0">
-                <summary className="cursor-pointer list-none font-display text-lg marker:content-none">
-                  <span className="flex items-center justify-between gap-4">
-                    {item.q}
-                    <span className="text-seal group-open:hidden">＋</span>
-                    <span className="hidden text-seal group-open:inline">－</span>
-                  </span>
-                </summary>
-                <p className="mt-3 text-base text-fg-muted">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-seal py-16 text-accent-fg">
         <div className="shell">
           <p className="kicker text-accent-fg/70">下一步</p>
           <h2 className="display mt-3 text-4xl">想裝電梯，先問啟揚</h2>
-          <p className="mt-4 max-w-lg text-accent-fg/85">
+          <p className="mt-4 max-w-lg text-lg text-accent-fg/90">
             留下房屋類型、樓層和照片。能裝、不能裝，我們講清楚。
           </p>
           <p className="mt-8 font-display text-4xl tracking-wide sm:text-5xl">
@@ -187,12 +144,7 @@ function Home() {
               {SITE.phoneDisplay}
             </a>
           </p>
-          <a
-            className="btn btn-on-ink mt-8"
-            href={SITE.formUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="btn btn-on-ink mt-8" href={SITE.formUrl} target="_blank" rel="noopener noreferrer">
             填需求表
           </a>
         </div>
