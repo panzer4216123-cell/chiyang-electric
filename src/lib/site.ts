@@ -142,7 +142,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "樓梯旁井道與入口",
     stage: "完成面",
-    image: "/images/branded/qy-040-finished-qy-logo.jpg",
+    image: "/images/branded/qy-040-finished-qy-logo.webp",
     note: "完成畫面可見井道、入口與既有樓梯相鄰。",
   },
   {
@@ -150,7 +150,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "從材料進場到入口",
     stage: "工程階段",
-    image: "/images/branded/qy-013-finished-qy-logo.jpg",
+    image: "/images/branded/qy-013-finished-qy-logo.webp",
     note: "可見設備材料進場與完成入口，不代替尺寸或施工方法。",
   },
   {
@@ -158,7 +158,7 @@ export const CASES: CaseItem[] = [
     area: "台南",
     title: "入口與內裝銜接",
     stage: "入口完成面",
-    image: "/images/branded/qy-006-finished-qy-logo.jpg",
+    image: "/images/branded/qy-006-finished-qy-logo.webp",
     note: "工程前與完成入口的階段差異，正式條件以個案文件為準。",
   },
   {
@@ -166,7 +166,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "井道施工與採光車廂",
     stage: "採光完成面",
-    image: "/images/branded/qy-022-finished-qy-logo.jpg",
+    image: "/images/branded/qy-022-finished-qy-logo.webp",
     note: "畫面可見井道與採光車廂，規格不由照片推定。",
   },
   {
@@ -174,7 +174,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "有限空間完成面",
     stage: "有限空間",
-    image: "/images/branded/qy-060-finished-qy-logo.jpg",
+    image: "/images/branded/qy-060-finished-qy-logo.webp",
     note: "既有空間內的完成銜接，實際空間限制待個案確認。",
   },
   {
@@ -182,7 +182,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "室外與入口",
     stage: "室外施工",
-    image: "/images/case-preview/qy-002-finished.jpg",
+    image: "/images/case-preview/qy-002-finished.webp",
     note: "室外與入口完成畫面，僅描述可見內容。",
   },
   {
@@ -190,7 +190,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "入口完成面",
     stage: "入口",
-    image: "/images/case-preview/qy-030-finished.jpg",
+    image: "/images/case-preview/qy-030-finished.webp",
     note: "入口與周邊動線的完成畫面。",
   },
   {
@@ -198,7 +198,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "採光入口",
     stage: "採光",
-    image: "/images/case-preview/qy-034-finished.jpg",
+    image: "/images/case-preview/qy-034-finished.webp",
     note: "採光入口完成畫面，用途與完成狀態不由單張照片推定。",
   },
   {
@@ -206,7 +206,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "既有空間整合",
     stage: "既有空間",
-    image: "/images/case-preview/qy-055-finished.jpg",
+    image: "/images/case-preview/qy-055-finished.webp",
     note: "既有建物內的完成銜接。",
   },
   {
@@ -214,7 +214,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "施工中的井道",
     stage: "施工中",
-    image: "/images/case-preview/qy-076-progress.jpg",
+    image: "/images/case-preview/qy-076-progress.webp",
     note: "施工階段現場，不作為驗收或許可證明。",
   },
   {
@@ -222,7 +222,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "透天完成面",
     stage: "完成面",
-    image: "/images/legacy/qy-old-finished-home.jpg",
+    image: "/images/legacy/qy-old-finished-home.webp",
     note: "舊站工程照。既有透天內的完成車廂與門。",
   },
   {
@@ -230,7 +230,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "室外井道",
     stage: "室外",
-    image: "/images/legacy/qy-old-outdoor-day.jpg",
+    image: "/images/legacy/qy-old-outdoor-day.webp",
     note: "舊站工程照。外掛井道與建物外牆。",
   },
   {
@@ -238,7 +238,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "夜間室外井道",
     stage: "室外",
-    image: "/images/legacy/qy-old-outdoor-night.jpg",
+    image: "/images/legacy/qy-old-outdoor-night.webp",
     note: "舊站工程照。夜間外觀，僅描述可見畫面。",
   },
   {
@@ -246,7 +246,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "車廂完成面",
     stage: "車廂",
-    image: "/images/legacy/qy-old-cabin.jpg",
+    image: "/images/legacy/qy-old-cabin.webp",
     note: "舊站工程照。車廂內裝完成畫面。",
   },
   {
@@ -254,7 +254,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "鋼構現場",
     stage: "施工中",
-    image: "/images/legacy/qy-old-steel.jpg",
+    image: "/images/legacy/qy-old-steel.webp",
     note: "舊站工程照。鋼構組立，不由照片推定規格。",
   },
   {
@@ -262,7 +262,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "外掛井道",
     stage: "室外",
-    image: "/images/legacy/qy-old-outdoor-shaft.jpg",
+    image: "/images/legacy/qy-old-outdoor-shaft.webp",
     note: "舊站工程照。建物外的井道與鷹架。",
   },
   {
@@ -270,7 +270,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "車廂木紋",
     stage: "車廂",
-    image: "/images/legacy/qy-old-cabin-wood.jpg",
+    image: "/images/legacy/qy-old-cabin-wood.webp",
     note: "舊站工程照。車廂內完成面。",
   },
   {
@@ -278,7 +278,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "電梯新建",
     stage: "工程",
-    image: "/images/legacy/qy-home-ser-lift.jpg",
+    image: "/images/legacy/qy-home-ser-lift.webp",
     note: "舊站首頁工程照。",
   },
   {
@@ -286,7 +286,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "泥作工程",
     stage: "工程",
-    image: "/images/legacy/qy-home-ser-masonry.jpg",
+    image: "/images/legacy/qy-home-ser-masonry.webp",
     note: "舊站首頁工程照。",
   },
   {
@@ -294,7 +294,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "鋼構工程",
     stage: "工程",
-    image: "/images/legacy/qy-home-ser-steel.jpg",
+    image: "/images/legacy/qy-home-ser-steel.webp",
     note: "舊站首頁工程照。",
   },
   {
@@ -302,7 +302,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "水電工程",
     stage: "工程",
-    image: "/images/legacy/qy-home-ser-elec.jpg",
+    image: "/images/legacy/qy-home-ser-elec.webp",
     note: "舊站首頁工程照。",
   },
   {
@@ -310,7 +310,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "裝潢修飾",
     stage: "工程",
-    image: "/images/legacy/qy-home-ser-interior.jpg",
+    image: "/images/legacy/qy-home-ser-interior.webp",
     note: "舊站首頁工程照。",
   },
   {
@@ -318,7 +318,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "鋼構搭建",
     stage: "施工中",
-    image: "/images/legacy/qy-home-work-frame.jpg",
+    image: "/images/legacy/qy-home-work-frame.webp",
     note: "舊站首頁工程照。",
   },
   {
@@ -326,7 +326,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "牆面裝潢",
     stage: "施工中",
-    image: "/images/legacy/qy-home-work-interior.jpg",
+    image: "/images/legacy/qy-home-work-interior.webp",
     note: "舊站首頁工程照。",
   },
   {
@@ -334,7 +334,7 @@ export const CASES: CaseItem[] = [
     area: "地區匿名",
     title: "施工中現場",
     stage: "施工中",
-    image: "/images/legacy/qy-home-work-ground.jpg",
+    image: "/images/legacy/qy-home-work-ground.webp",
     note: "舊站首頁工程照。",
   },
 ];

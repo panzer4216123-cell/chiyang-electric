@@ -33,7 +33,7 @@ function Home() {
           <CropFrame>
             <figure>
               <img
-                src="/images/branded/qy-040-finished-qy-logo.jpg"
+                src="/images/branded/qy-040-finished-qy-logo.webp"
                 alt="樓梯旁加裝電梯的完成畫面"
                 width={960}
                 height={1280}
@@ -60,7 +60,7 @@ function Home() {
         <div className="shell grid items-end gap-10 py-14 lg:grid-cols-[1fr_auto]">
           <CropFrame>
             <img
-              src="/images/branded/qy-040-progress-qy-logo.jpg"
+              src="/images/branded/qy-040-progress-qy-logo.webp"
               alt="井道安裝中"
               width={1108}
               height={1477}
@@ -104,7 +104,7 @@ function Home() {
           </Link>
         </div>
         <div className="film pl-4 md:pl-[max(1rem,calc((100vw-1180px)/2+1rem))]">
-          {CASES.map((item) => (
+          {CASES.slice(0, 12).map((item) => (
             <Link key={item.id} to="/cases">
               <img src={item.image} alt={item.title} width={640} height={800} loading="lazy" decoding="async" />
               <div className="mt-3 flex items-center justify-between gap-2">
