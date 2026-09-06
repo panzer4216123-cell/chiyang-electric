@@ -27,3 +27,15 @@
 需求表 https://forms.gle/uCqMDaTfuiHCuHvw8
 
 改網站：改 `src/lib/site.ts`（文案）與 `src/routes/`（頁面）。不要每輪重建定位。
+
+## 這個 repo 現在有什麼
+
+- `src/lib/site.ts` 口號、痛點、FAQ、案例、電話
+- `src/routes/index.tsx` 首頁
+- `src/routes/cases.tsx` 工程現場
+- `src/routes/contact.tsx` 聯絡
+- `src/components/` 對聯、頁首頁尾、裁切框
+- `src/styles.css` 印泥紅／對聯直書
+- `public/` logo、工程照
+
+完整可跑的框架仍在 Grok 這則對話的預覽。改文案改 site.ts 與 routes 即可。
