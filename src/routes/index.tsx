@@ -12,7 +12,7 @@ function Home() {
         <div className="shell grid items-end gap-10 py-10 lg:grid-cols-[auto_1fr] lg:py-14">
           <div>
             <Couplet banner="舊透天加梯" right={SLOGANS.install.line1} left={SLOGANS.install.line2} />
-            <p className="mt-8 max-w-sm text-sm text-fg-muted">
+            <p className="mt-8 max-w-sm text-base text-fg-muted">
               空間窄、別家不接、地板不能大挖。先看這個家怎麼住，再談電梯怎麼放。
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -23,7 +23,7 @@ function Home() {
                 看現場
               </Link>
             </div>
-            <p className="mt-6 text-sm">
+            <p className="mt-6 text-base">
               <span className="text-fg-muted">來電　</span>
               <a href={`tel:${SITE.phoneTel}`} className="tracking-wide no-underline">
                 {SITE.phoneDisplay}
@@ -41,7 +41,7 @@ function Home() {
                 fetchPriority="high"
                 decoding="async"
               />
-              <figcaption className="flex items-center justify-between py-3 text-xs tracking-widest text-fg-muted">
+              <figcaption className="flex items-center justify-between py-3 text-base text-fg-muted">
                 <span className="chop">QY-040</span>
                 <span>匿名工程 · 完成面</span>
               </figcaption>
@@ -78,7 +78,7 @@ function Home() {
       <section className="border-b border-line py-16">
         <div className="shell">
           <p className="hengpi">{SLOGANS.floor.line1}{SLOGANS.floor.line2}</p>
-          <p className="mt-4 max-w-lg text-sm text-fg-muted">
+          <p className="mt-4 max-w-lg text-base text-fg-muted">
             怕動防水、怕挖太深、怕把家拆掉。深度與做法以現勘為準，這裡不寫死規格。
           </p>
           <div className="mt-10 grid border-t border-l border-line sm:grid-cols-2">
@@ -86,7 +86,7 @@ function Home() {
               <article key={item.id} className="border-b border-r border-line p-6 sm:p-8">
                 <p className="font-display text-3xl text-seal">{String(i + 1).padStart(2, "0")}</p>
                 <h3 className="mt-4 font-display text-2xl">{item.title}</h3>
-                <p className="mt-3 text-sm text-fg-muted">{item.body}</p>
+                <p className="mt-3 text-base text-fg-muted">{item.body}</p>
               </article>
             ))}
           </div>
@@ -99,7 +99,7 @@ function Home() {
             <p className="kicker">工程現場</p>
             <h2 className="display mt-3 text-3xl sm:text-4xl">不是樣品屋</h2>
           </div>
-          <Link to="/cases" className="text-sm tracking-widest no-underline hover:text-seal">
+          <Link to="/cases" className="text-base tracking-widest no-underline hover:text-seal">
             全部照片 →
           </Link>
         </div>
@@ -109,7 +109,7 @@ function Home() {
               <img src={item.image} alt={item.title} width={640} height={800} loading="lazy" decoding="async" />
               <div className="mt-3 flex items-center justify-between gap-2">
                 <span className="chop">{item.id}</span>
-                <span className="text-xs text-fg-muted">{item.title}</span>
+                <span className="text-base text-fg-muted">{item.title}</span>
               </div>
             </Link>
           ))}
@@ -120,14 +120,14 @@ function Home() {
         <div className="shell">
           <p className="kicker">電梯保養</p>
           <h2 className="display mt-3 text-3xl sm:text-4xl">各廠牌都養。裝完也找我們。</h2>
-          <p className="mt-4 max-w-xl text-sm text-fg-muted">
+          <p className="mt-4 max-w-xl text-base text-fg-muted">
             故障通知後派人到場。保養內容以合約為準。
           </p>
           <div className="mt-10 grid border-t border-l border-line sm:grid-cols-2 lg:grid-cols-3">
             {MAINTAIN.map((item) => (
               <article key={item.title} className="border-b border-r border-line p-6">
                 <h3 className="font-display text-2xl">{item.title}</h3>
-                <p className="mt-3 text-sm text-fg-muted">{item.body}</p>
+                <p className="mt-3 text-base text-fg-muted">{item.body}</p>
               </article>
             ))}
           </div>
@@ -146,7 +146,7 @@ function Home() {
                 <span className="font-display text-xl text-seal">{step.n}</span>
                 <div>
                   <h3 className="font-display text-xl">{step.title}</h3>
-                  <p className="mt-1 text-sm text-fg-muted">{step.body}</p>
+                  <p className="mt-1 text-base text-fg-muted">{step.body}</p>
                 </div>
               </li>
             ))}
@@ -168,7 +168,7 @@ function Home() {
                     <span className="hidden text-seal group-open:inline">－</span>
                   </span>
                 </summary>
-                <p className="mt-3 text-sm text-fg-muted">{item.a}</p>
+                <p className="mt-3 text-base text-fg-muted">{item.a}</p>
               </details>
             ))}
           </div>

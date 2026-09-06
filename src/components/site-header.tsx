@@ -21,7 +21,7 @@ export function SiteHeader() {
             alt={SITE.legalName}
             width={180}
             height={50}
-            className="h-9 w-auto"
+            className="h-11 w-auto"
           />
         </Link>
 
@@ -30,7 +30,7 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm tracking-widest no-underline hover:text-seal"
+              className="text-base tracking-wide no-underline hover:text-seal"
             >
               {item.label}
             </Link>
@@ -38,15 +38,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
-          <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="text-sm tracking-widest no-underline hover:text-seal">
+          <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="text-base tracking-wide no-underline hover:text-seal">
             臉書
           </a>
           {SITE.instagram ? (
-            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="text-sm tracking-widest no-underline hover:text-seal">
+            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="text-base tracking-wide no-underline hover:text-seal">
               IG
             </a>
           ) : null}
-          <a href={`tel:${SITE.phoneTel}`} className="text-sm tracking-wide no-underline">
+          <a href={`tel:${SITE.phoneTel}`} className="text-base tracking-wide no-underline">
             {SITE.phoneDisplay}
           </a>
           <a className="btn btn-primary" href={SITE.formUrl} target="_blank" rel="noopener noreferrer">

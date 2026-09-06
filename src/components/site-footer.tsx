@@ -12,14 +12,14 @@ export function SiteFooter() {
             <br />
             {SLOGANS.install.line2}
           </p>
-          <p className="mt-3 text-sm text-fg-on-ink/55">
+          <p className="mt-3 text-base text-fg-on-ink/80">
             {SLOGANS.maintain.line1}
             {SLOGANS.maintain.line2}
           </p>
         </div>
         <div>
           <p className="kicker text-fg-on-ink/40">頁面</p>
-          <ul className="mt-4 space-y-3 text-sm">
+          <ul className="mt-4 space-y-3 text-base">
             <li>
               <Link to="/" className="no-underline hover:text-seal">
                 首頁
@@ -56,7 +56,7 @@ export function SiteFooter() {
         </div>
         <div>
           <p className="kicker text-fg-on-ink/40">據點</p>
-          <ul className="mt-4 space-y-4 text-sm text-fg-on-ink/80">
+          <ul className="mt-4 space-y-4 text-base text-fg-on-ink/90">
             {LOCATIONS.map((loc) => (
               <li key={loc.id}>
                 <p>{loc.name}</p>
@@ -76,7 +76,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <p className="shell flex flex-wrap items-center justify-between gap-3 py-5 text-xs text-fg-on-ink/40">
+        <p className="shell flex flex-wrap items-center justify-between gap-3 py-5 text-sm text-fg-on-ink/70">
           <span>
             © {new Date().getFullYear()} {SITE.legalName}
           </span>

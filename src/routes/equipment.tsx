@@ -16,7 +16,7 @@ function EquipmentPage() {
         <div className="shell">
           <p className="kicker">設備型錄</p>
           <h1 className="display mt-3 max-w-2xl text-4xl sm:text-5xl">主機、門機、車廂</h1>
-          <p className="mt-4 max-w-xl text-sm text-fg-muted">
+          <p className="mt-4 max-w-xl text-base text-fg-muted">
             舊站乘客電梯型錄。規格、型號以現勘、圖說、合約為準，不以型錄推定。
           </p>
         </div>
@@ -44,7 +44,7 @@ function EquipmentPage() {
       </section>
       <section className="border-t border-line py-12">
         <div className="shell flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <p className="max-w-xl text-sm text-fg-muted">自家怎麼裝，看工程現場。保養另談。</p>
+          <p className="max-w-xl text-base text-fg-muted">自家怎麼裝，看工程現場。保養另談。</p>
           <div className="flex flex-wrap gap-3">
             <Link to="/cases" className="btn btn-ghost">
               工程現場

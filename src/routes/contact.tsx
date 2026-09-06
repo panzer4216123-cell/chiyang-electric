@@ -41,9 +41,9 @@ function ContactPage() {
         </div>
         <aside className="border border-seal p-8">
           <Couplet right={SLOGANS.install.line1} left={SLOGANS.install.line2} />
-          <p className="mt-8 text-sm text-fg-muted">新梯不好裝，來看現場。裝完不好養，保養也找我們。</p>
+          <p className="mt-8 text-base text-fg-muted">新梯不好裝，來看現場。裝完不好養，保養也找我們。</p>
           <p className="mt-3 font-display text-lg">{SLOGANS.floor.line1}{SLOGANS.floor.line2}</p>
-          <p className="mt-2 text-xs tracking-widest text-fg-muted">可行性與深度以現勘、圖說、合約為準。不是每戶都能少動地板。</p>
+          <p className="mt-2 text-base text-fg-muted">可行性與深度以現勘、圖說、合約為準。不是每戶都能少動地板。</p>
         </aside>
       </section>
 
@@ -68,12 +68,12 @@ function ContactPage() {
                     {loc.faxDisplay ? <span className="text-fg-muted">　傳真 {loc.faxDisplay}</span> : null}
                   </p>
                 ) : (
-                  <p className="mt-2 text-sm text-fg-muted">電話請打總公司或免付費專線</p>
+                  <p className="mt-2 text-base text-fg-muted">電話請打總公司或免付費專線</p>
                 )}
               </article>
             ))}
           </div>
-          <p className="mt-8 text-sm text-fg-muted">
+          <p className="mt-8 text-base text-fg-muted">
             信箱{" "}
             <a href={`mailto:${SITE.email}`} className="no-underline">
               {SITE.email}
