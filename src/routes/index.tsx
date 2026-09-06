@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Couplet } from "@/components/couplet";
 import { CropFrame } from "@/components/crop-frame";
-import { CASES, SITE, SLOGANS, STEPS, STORY } from "@/lib/site";
+import { CASES, SITE, SLOGANS, STEPS, STORY, STORIES } from "@/lib/site";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -112,6 +112,29 @@ function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-line py-16">
+        <div className="shell">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="kicker">訪談</p>
+              <h2 className="display mt-3 text-3xl">同仁先講。屋主接著講。</h2>
+            </div>
+            <Link to="/stories" className="btn btn-ghost">
+              全部訪談
+            </Link>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2">
+            {STORIES.filter((s) => s.image).map((item) => (
+              <a key={item.id} href={item.href} target="_blank" rel="noopener noreferrer" className="no-underline">
+                <img src={item.image} alt={item.title} width={1200} height={675} className="aspect-video w-full object-cover" loading="lazy" />
+                <p className="mt-3 text-base text-seal">{item.kind}</p>
+                <h3 className="font-display text-xl">{item.title}</h3>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

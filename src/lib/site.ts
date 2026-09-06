@@ -143,6 +143,36 @@ export const TEAM_PHOTOS = [
   { src: "/images/team/IMG_3579.webp", alt: "開會" },
 ] as const;
 
+export const STORIES = [
+  {
+    id: "ep01",
+    kind: "同仁",
+    title: "啟揚同仁 EP.01｜徐景祥",
+    note: "現場怎麼裝，工程師自己講。",
+    image: "/images/stories/ep01-cover.webp",
+    href: "https://www.facebook.com/profile.php?id=100064054864315",
+    status: "上架",
+  },
+  {
+    id: "ep02",
+    kind: "同仁",
+    title: "啟揚同仁 EP.02｜王上萂",
+    note: "在這行七年。保養、現場、客人怎麼問。",
+    image: "/images/stories/ep02-cover.webp",
+    href: "https://www.facebook.com/profile.php?id=100064054864315",
+    status: "上架",
+  },
+  {
+    id: "tainan",
+    kind: "屋主",
+    title: "台南屋主訪談",
+    note: "下週一三五拍攝。成片再補上，不先寫還沒拍到的話。",
+    image: "",
+    href: "",
+    status: "拍攝中",
+  },
+] as const;
+
 export const SURVEY = [
   "幾樓到幾樓",
   "梯放樓梯中間、旁邊，還是室外",
