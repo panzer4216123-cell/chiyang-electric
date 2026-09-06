@@ -20,7 +20,8 @@ export function LeadForm() {
   }, []);
 
   const source = LEAD_SOURCES.find((s) => s.id === sourceId) ?? LEAD_SOURCES[0];
-  const embed = useMemo(() => formWithSource(source.value), [source]);
+  const embed = useMemo(() => formWithSource(source.value, true), [source]);
+  const openUrl = useMemo(() => formWithSource(source.value, false), [source]);
 
   return (
     <section id="lead" className="border-t border-line py-14">
@@ -45,14 +46,18 @@ export function LeadForm() {
         </div>
         <div className="mt-8 overflow-hidden border border-line bg-bg-elevated">
           <iframe
+            key={sourceId}
             title="啟揚需求表"
             src={embed}
             className="h-[min(90vh,52rem)] w-full"
           />
         </div>
-        <p className="mt-4">
-          <a className="btn btn-ghost" href={embed.replace("&embedded=true", "")} target="_blank" rel="noopener noreferrer">
+        <p className="mt-4 flex flex-wrap gap-3">
+          <a className="btn btn-ghost" href={openUrl} target="_blank" rel="noopener noreferrer">
             開新分頁填
+          </a>
+          <a className="btn btn-ghost" href={`tel:${SITE.phoneTel}`}>
+            {SITE.phoneDisplay}
           </a>
         </p>
         {SITE.line ? (

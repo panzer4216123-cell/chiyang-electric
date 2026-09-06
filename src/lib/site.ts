@@ -31,11 +31,11 @@ export const LEAD_SOURCES = [
   { id: "friend", label: "親友介紹", value: "親友或合作夥伴介紹" },
 ] as const;
 
-export function formWithSource(sourceValue: string) {
+export function formWithSource(sourceValue: string, embedded = true) {
   const u = new URL(SITE.formEmbed);
   u.searchParams.set("usp", "pp_url");
   u.searchParams.set(`entry.${SITE.formSourceEntry}`, sourceValue);
-  u.searchParams.set("embedded", "true");
+  if (embedded) u.searchParams.set("embedded", "true");
   return u.toString();
 }
 
