@@ -26,11 +26,12 @@ export function LeadForm() {
     <section id="lead" className="border-t border-line py-14">
       <div className="shell">
         <p className="kicker">需求表</p>
-        <h2 className="display mt-3 text-3xl">在這頁填。先說你從哪裡來。</h2>
+        <h2 className="display mt-3 text-3xl">留下這個家怎麼住</h2>
         <p className="mt-4 max-w-xl text-base text-fg-muted">
-          這題對公司對帳用。填了，業務才知道是網站、臉書還是親友。
+          姓名、電話、樓層。照片有就更好。能裝再說怎麼裝。
         </p>
-        <div className="mt-6 flex flex-wrap gap-2">
+        <p className="mt-6 text-base">你從哪裡看到啟揚</p>
+        <div className="mt-3 flex flex-wrap gap-2">
           {LEAD_SOURCES.map((item) => (
             <button
               key={item.id}
@@ -42,7 +43,6 @@ export function LeadForm() {
             </button>
           ))}
         </div>
-        <p className="mt-3 text-base text-fg-muted">已選：{source.label}</p>
         <div className="mt-8 overflow-hidden border border-line bg-bg-elevated">
           <iframe
             title="啟揚需求表"
@@ -52,7 +52,7 @@ export function LeadForm() {
         </div>
         <p className="mt-4">
           <a className="btn btn-ghost" href={embed.replace("&embedded=true", "")} target="_blank" rel="noopener noreferrer">
-            表單太小，開新分頁
+            開新分頁填
           </a>
         </p>
         {SITE.line ? (
@@ -61,9 +61,7 @@ export function LeadForm() {
               LINE 問
             </a>
           </p>
-        ) : (
-          <p className="mt-6 text-base text-fg-muted">LINE 官方帳號公司給了再掛。現在先填表或打電話。</p>
-        )}
+        ) : null}
       </div>
     </section>
   );
