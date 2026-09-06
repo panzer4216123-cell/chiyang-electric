@@ -126,6 +126,9 @@ export const PEOPLE = [
 export const TEAM_PHOTOS = [
   { src: "/images/team/IMG_3556.webp", alt: "啟揚團體" },
   { src: "/images/team/sales-meeting.webp", alt: "業務開會" },
+  { src: "/images/team/sales-3589.webp", alt: "業務開會" },
+  { src: "/images/team/sales-3590.webp", alt: "業務開會" },
+  { src: "/images/team/sales-3591.webp", alt: "業務開會" },
   { src: "/images/team/IMG_3579.webp", alt: "工務開會" },
 ] as const;
 
