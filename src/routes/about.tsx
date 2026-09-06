@@ -48,7 +48,7 @@ function AboutPage() {
       <section id="stories" className="border-b border-line py-14">
         <div className="shell">
           <p className="kicker">訪談</p>
-          <h2 className="display mt-3 text-3xl">同仁先講。屋主接著講。</h2>
+          <h2 className="display mt-3 text-3xl">同仁怎麼講</h2>
           <div className="mt-8 grid gap-8 sm:grid-cols-2">
             {STORIES.filter((s) => s.image).map((item) => (
               <article key={item.id}>
@@ -68,12 +68,6 @@ function AboutPage() {
               </article>
             ))}
           </div>
-          <p className="mt-8 max-w-xl text-base text-fg-muted">
-            台南屋主訪談下週拍攝。成片再補。
-          </p>
-          <Link to="/stories" className="mt-4 inline-block text-base no-underline hover:text-seal">
-            訪談頁 →
-          </Link>
         </div>
       </section>
 

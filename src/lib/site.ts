@@ -151,15 +151,6 @@ export const STORIES = [
     href: "https://www.facebook.com/profile.php?id=100064054864315",
     status: "上架",
   },
-  {
-    id: "tainan",
-    kind: "屋主",
-    title: "台南屋主訪談",
-    note: "下週一三五拍攝。成片再補上，不先寫還沒拍到的話。",
-    image: "",
-    href: "",
-    status: "拍攝中",
-  },
 ] as const;
 
 export const SURVEY = [
