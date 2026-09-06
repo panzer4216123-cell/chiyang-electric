@@ -13,7 +13,7 @@ const NAV = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-bg">
+    <header className="border-b border-line bg-bg md:sticky md:top-0 md:z-40">
       <div className="shell flex items-center justify-between gap-4 py-3">
         <Link to="/" className="flex items-center no-underline">
           <img
@@ -67,10 +67,6 @@ export function SiteHeader() {
             我家能不能裝
           </Link>
         </div>
-
-        <Link to="/cases" className="btn btn-ghost md:hidden">
-          看現場
-        </Link>
       </div>
     </header>
   );
