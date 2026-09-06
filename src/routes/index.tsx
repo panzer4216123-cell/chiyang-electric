@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Couplet } from "@/components/couplet";
 import { CropFrame } from "@/components/crop-frame";
-import { CASES, FAQS, PAINS, SITE, SLOGANS, STEPS } from "@/lib/site";
+import { CASES, FAQS, PAINS, SITE, SLOGANS, STEPS, MAINTAIN } from "@/lib/site";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -113,6 +113,24 @@ function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t border-line py-16">
+        <div className="shell">
+          <p className="kicker">電梯保養</p>
+          <h2 className="display mt-3 text-3xl sm:text-4xl">各廠牌都養。裝完也找我們。</h2>
+          <p className="mt-4 max-w-xl text-sm text-fg-muted">
+            故障通知後派人到場。保養內容以合約為準。
+          </p>
+          <div className="mt-10 grid border-t border-l border-line sm:grid-cols-2 lg:grid-cols-3">
+            {MAINTAIN.map((item) => (
+              <article key={item.title} className="border-b border-r border-line p-6">
+                <h3 className="font-display text-2xl">{item.title}</h3>
+                <p className="mt-3 text-sm text-fg-muted">{item.body}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
