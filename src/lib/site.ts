@@ -3,8 +3,12 @@ export const SITE = {
   legalName: "啟揚機電有限公司",
   phoneDisplay: "07-353-8504",
   phoneTel: "+88673538504",
+  faxDisplay: "07-353-5947",
+  email: "chi.yang7039@gmail.com",
+  address: "高雄市大社區民族路15-10號",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%B8%82%E5%A4%A7%E7%A4%BE%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF15-10%E8%99%9F",
   formUrl: "https://forms.gle/uCqMDaTfuiHCuHvw8",
-  facebook: "https://www.facebook.com/profile.php?id=100064054864315&locale=zh_TW",
+  facebook: "https://www.facebook.com/profile.php?id=100064054864315",
   instagram: "https://www.instagram.com/chiyang7039.admin/",
   reel: "https://www.facebook.com/reel/1033082013055204",
 } as const;

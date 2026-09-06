@@ -35,29 +35,35 @@ export function SiteFooter() {
                 聯絡評估
               </Link>
             </li>
-          </ul>
-        </div>
-        <div>
-          <p className="kicker text-fg-on-ink/40">聯絡</p>
-          <ul className="mt-4 space-y-3 text-sm">
-            <li>
-              <a href={`tel:${SITE.phoneTel}`} className="no-underline hover:text-seal">
-                {SITE.phoneDisplay}
-              </a>
-            </li>
-            <li>
-              <a href={SITE.formUrl} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                新梯需求表
-              </a>
-            </li>
             <li>
               <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                Facebook
+                臉書日常
               </a>
             </li>
             <li>
               <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                Instagram
+                Instagram 施工
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p className="kicker text-fg-on-ink/40">公司</p>
+          <ul className="mt-4 space-y-3 text-sm text-fg-on-ink/80">
+            <li>
+              <a href={`tel:${SITE.phoneTel}`} className="no-underline hover:text-seal">
+                電話　{SITE.phoneDisplay}
+              </a>
+            </li>
+            <li>傳真　{SITE.faxDisplay}</li>
+            <li>
+              <a href={`mailto:${SITE.email}`} className="no-underline hover:text-seal">
+                {SITE.email}
+              </a>
+            </li>
+            <li>
+              <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
+                {SITE.address}
               </a>
             </li>
           </ul>

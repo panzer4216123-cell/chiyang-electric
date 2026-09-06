@@ -3,6 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { SiteDock } from "@/components/site-dock";
 import { SITE } from "@/lib/site";
 import appCss from "../styles.css?url";
 
@@ -56,6 +57,7 @@ function RootDocument() {
           <SiteHeader />
           <Outlet />
           <SiteFooter />
+          <SiteDock />
         </AuthProvider>
         <Scripts />
       </body>

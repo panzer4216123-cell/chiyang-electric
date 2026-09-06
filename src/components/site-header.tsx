@@ -37,6 +37,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
+          <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="text-sm tracking-widest no-underline hover:text-seal">
+            臉書
+          </a>
+          <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="text-sm tracking-widest no-underline hover:text-seal">
+            IG
+          </a>
           <a href={`tel:${SITE.phoneTel}`} className="text-sm tracking-wide no-underline">
             {SITE.phoneDisplay}
           </a>
@@ -70,6 +76,12 @@ export function SiteHeader() {
             ))}
             <a href={`tel:${SITE.phoneTel}`} className="border-b border-border py-3 no-underline">
               {SITE.phoneDisplay}
+            </a>
+            <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="border-b border-border py-3 no-underline">
+              臉書日常
+            </a>
+            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="border-b border-border py-3 no-underline">
+              Instagram 施工
             </a>
             <a
               className="btn btn-primary mt-4"
