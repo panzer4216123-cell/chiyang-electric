@@ -15,8 +15,8 @@
   --color-accent-fg: #f7f3ea;
   --color-border: color-mix(in oklab, #141414 16%, transparent);
   --color-line: color-mix(in oklab, #141414 28%, transparent);
-  --font-sans: "Chiron Hei HK", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-  --font-display: "Chiron Sung HK", "Songti TC", "Noto Serif TC", serif;
+  --font-sans: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --font-display: "Songti TC", "Noto Serif TC", "PMingLiU", serif;
   --radius-sm: 2px;
   --radius-md: 2px;
   --radius-lg: 2px;
@@ -27,7 +27,7 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -341,6 +341,9 @@
     font-weight: 700;
     letter-spacing: 0.04em;
     text-decoration: none;
+    white-space: nowrap;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(196, 26, 43, 0.18);
   }
 
   .dock a.dock-go {
