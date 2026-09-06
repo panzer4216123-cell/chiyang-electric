@@ -31,6 +31,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/equipment" className="no-underline hover:text-seal">
+                設備型錄
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" className="no-underline hover:text-seal">
                 聯絡評估
               </Link>

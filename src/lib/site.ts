@@ -127,6 +127,35 @@ export const FAQS = [
   },
 ] as const;
 
+export const CATALOG = [
+  { id: "CAT-01", title: "主機系統", image: "/images/catalog/cat-01.webp" },
+  { id: "CAT-02", title: "主機系統", image: "/images/catalog/cat-02.webp" },
+  { id: "CAT-03", title: "變頻門機", image: "/images/catalog/cat-03.webp" },
+  { id: "CAT-04", title: "門機與光幕", image: "/images/catalog/cat-04.webp" },
+  { id: "CAT-05", title: "車廂裝潢", image: "/images/catalog/cat-05.webp" },
+  { id: "CAT-06", title: "車廂裝潢", image: "/images/catalog/cat-06.webp" },
+  { id: "CAT-07", title: "轎廂天花", image: "/images/catalog/cat-07.webp" },
+  { id: "CAT-08", title: "轎廂天花", image: "/images/catalog/cat-08.webp" },
+  { id: "CAT-09", title: "型錄", image: "/images/catalog/cat-09.webp" },
+  { id: "CAT-10", title: "型錄", image: "/images/catalog/cat-10.webp" },
+  { id: "CAT-11", title: "型錄", image: "/images/catalog/cat-11.webp" },
+  { id: "CAT-12", title: "型錄", image: "/images/catalog/cat-12.webp" },
+  { id: "CAT-13", title: "車廂", image: "/images/catalog/cat-13.webp" },
+  { id: "CAT-14", title: "車廂", image: "/images/catalog/cat-14.webp" },
+  { id: "CAT-15", title: "車廂", image: "/images/catalog/cat-15.webp" },
+  { id: "CAT-16", title: "車廂", image: "/images/catalog/cat-16.webp" },
+  { id: "CAT-17", title: "車廂", image: "/images/catalog/cat-17.webp" },
+  { id: "CAT-18", title: "車廂", image: "/images/catalog/cat-18.webp" },
+  { id: "CAT-19", title: "門套", image: "/images/catalog/cat-19.webp" },
+  { id: "CAT-20", title: "門套", image: "/images/catalog/cat-20.webp" },
+  { id: "CAT-21", title: "門套", image: "/images/catalog/cat-21.webp" },
+  { id: "CAT-22", title: "按鈕", image: "/images/catalog/cat-22.webp" },
+  { id: "CAT-23", title: "操作盤", image: "/images/catalog/cat-23.webp" },
+  { id: "CAT-24", title: "門機", image: "/images/catalog/cat-24.webp" },
+  { id: "CAT-25", title: "門機", image: "/images/catalog/cat-25.webp" },
+  { id: "CAT-26", title: "門機", image: "/images/catalog/cat-26.webp" },
+] as const;
+
 export type CaseItem = {
   id: string;
   area: string;
