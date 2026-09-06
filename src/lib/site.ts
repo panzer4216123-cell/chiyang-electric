@@ -212,4 +212,20 @@ export const CASES: CaseItem[] = [
     image: "/images/legacy/qy-old-steel.jpg",
     note: "舊站工程照。鋼構組立，不由照片推定規格。",
   },
+  {
+    id: "QY-OLD-06",
+    area: "地區匿名",
+    title: "外掛井道",
+    stage: "室外",
+    image: "/images/legacy/qy-old-outdoor-shaft.jpg",
+    note: "舊站工程照。建物外的井道與鷹架。",
+  },
+  {
+    id: "QY-OLD-07",
+    area: "地區匿名",
+    title: "車廂木紋",
+    stage: "車廂",
+    image: "/images/legacy/qy-old-cabin-wood.jpg",
+    note: "舊站工程照。車廂內完成面。",
+  },
 ];

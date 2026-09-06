@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CropFrame } from "@/components/crop-frame";
 import { CASES, SITE } from "@/lib/site";
 
@@ -14,16 +14,23 @@ function CasesPage() {
     <main id="main" className="pb-20">
       <section className="border-b border-line py-12">
         <div className="shell">
-          <p className="kicker">工程現場</p>
-          <h1 className="display mt-3 max-w-xl text-4xl sm:text-5xl">看得見施工，才知道家會變成什麼樣子</h1>
+          <p className="kicker">工程檔案</p>
+          <h1 className="display mt-3 max-w-2xl text-4xl sm:text-5xl">現場看得到，才拿得出去跟屋主講</h1>
           <p className="mt-4 max-w-xl text-sm text-fg-muted">
-            匿名案件。只描述畫面看得見的。坑深、規格、檢查與許可，不由照片推定。
+            匿名編號。只寫畫面看得見的。新案持續補上，不把沒有照片的案子寫成已經在網站上。
           </p>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {CASES.map((item) => (
+              <a key={item.id} href={`#${item.id}`} className="chop no-underline">
+                {item.id}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
-      <section className="shell mt-10 columns-1 gap-8 sm:columns-2">
+      <section className="shell mt-10 columns-1 gap-8 sm:columns-2 lg:columns-3">
         {CASES.map((item) => (
-          <article key={item.id} className="mb-10 break-inside-avoid">
+          <article key={item.id} id={item.id} className="mb-10 break-inside-avoid">
             <CropFrame>
               <img
                 src={item.image}
@@ -45,9 +52,16 @@ function CasesPage() {
           </article>
         ))}
       </section>
-      <p className="shell mt-4 max-w-2xl text-sm text-fg-muted">
-        業主隱私以匿名編號處理。評估自家能不能裝，帶縣市、樓層與現場照片即可。
-      </p>
+      <section className="border-t border-line py-12">
+        <div className="shell flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <p className="max-w-xl text-sm text-fg-muted">
+            業主隱私以編號處理。有新的完成面，補進這頁。規格、檢查、許可仍以個案文件為準。
+          </p>
+          <Link to="/contact" className="btn btn-primary">
+            評估自家
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
