@@ -7,8 +7,8 @@
 
 ## 峰哥請點這裡
 
-**https://panzer4216123-cell.github.io/chiyang-electric/**
+**https://panzer4216123-cell.github.io/**
 
-這是現行站的公開預覽，不用登入。不是 chiyang7039.com 正式網域。
+不用登入。現行口號預覽，不是 chiyang7039.com 正式網域。
 
-Grok Bot 先讀 [BOT.md](./BOT.md)。
+程式底稿在這個 repo。Grok Bot 先讀 [BOT.md](./BOT.md)。
