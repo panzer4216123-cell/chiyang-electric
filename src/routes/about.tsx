@@ -62,7 +62,6 @@ function AboutPage() {
               </article>
             ))}
           </div>
-          <p className="mt-6 text-base text-fg-muted">各部門介紹等老闆點頭再加。峰哥若要換照片，給一張就換。</p>
         </div>
       </section>
 
