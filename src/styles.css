@@ -263,6 +263,47 @@
     padding: 0.5rem 0.75rem;
   }
 
+  .reel {
+    overflow: hidden;
+  }
+
+  .reel-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: reel-move 36s linear infinite;
+  }
+
+  .reel:hover .reel-track,
+  .reel:focus-within .reel-track {
+    animation-play-state: paused;
+  }
+
+  .reel figure {
+    margin: 0;
+    width: min(78vw, 28rem);
+    flex: none;
+  }
+
+  .reel img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .reel figcaption {
+    margin-top: 0.6rem;
+    font-size: 1rem;
+    color: var(--color-fg-muted);
+  }
+
+  @keyframes reel-move {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   .dock {
     display: none;
   }
@@ -326,5 +367,8 @@
   }
   .btn {
     transition: none;
+  }
+  .reel-track {
+    animation: none;
   }
 }

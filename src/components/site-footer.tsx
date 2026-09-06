@@ -38,7 +38,7 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link to="/stories" className="no-underline hover:text-seal">
+              <Link to="/about" hash="stories" className="no-underline hover:text-seal">
                 訪談
               </Link>
             </li>

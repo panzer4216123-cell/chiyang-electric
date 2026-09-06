@@ -91,9 +91,9 @@ export const STORY = {
 } as const;
 
 export const ABOUT = {
-  kicker: "啟揚怎麼來的",
+  kicker: "關於啟揚",
   title: "先會裝，才開了這家公司。",
-  lead: "峰哥從現場出來。專門看已經住進去的透天：窄、怪、別家不接。能裝才說怎麼裝。裝完，保養也找我們。",
+  lead: "洪國峰做電梯二十五年。前十五年在現場，後來開了啟揚。來看已經住進去的家。能裝才說怎麼裝。裝完也養。",
   stages: [
     {
       n: "01",
@@ -115,32 +115,18 @@ export const ABOUT = {
 
 export const PEOPLE = [
   {
-    id: "feng",
-    name: "峰哥",
+    id: "hong",
+    name: "洪國峰",
     role: "創辦人",
-    bio: "現場出來的。喜歡把電梯裝進已經住著的家。",
-    image: "/images/team/IMG_3584.webp",
-  },
-  {
-    id: "huang",
-    name: "黃大姐",
-    role: "業務",
-    bio: "客人怎麼問、現場怎麼接，她把這條線接起來。",
-    image: "",
-  },
-  {
-    id: "tian",
-    name: "田大哥",
-    role: "工務",
-    bio: "能不能裝、怎麼裝完，工務看現場。",
-    image: "",
+    bio: "做電梯二十五年。前十五年在現場，後來開了啟揚，把電梯裝進已經住著的家。",
+    image: "/images/team/hong-guofeng.webp",
   },
 ] as const;
 
 export const TEAM_PHOTOS = [
-  { src: "/images/team/IMG_3556.webp", alt: "啟揚團隊" },
-  { src: "/images/team/IMG_3557.webp", alt: "啟揚團隊合影" },
-  { src: "/images/team/IMG_3579.webp", alt: "開會" },
+  { src: "/images/team/IMG_3556.webp", alt: "啟揚團體" },
+  { src: "/images/team/sales-meeting.webp", alt: "業務開會" },
+  { src: "/images/team/IMG_3579.webp", alt: "工務開會" },
 ] as const;
 
 export const STORIES = [

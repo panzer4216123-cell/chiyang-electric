@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CropFrame } from "@/components/crop-frame";
-import { ABOUT, PEOPLE, SITE, TEAM_PHOTOS } from "@/lib/site";
+import { PhotoReel } from "@/components/photo-reel";
+import { ABOUT, PEOPLE, SITE, STORIES } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -10,13 +11,25 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
+  const founder = PEOPLE[0];
   return (
     <main id="main" className="pb-20">
-      <section className="border-b border-line py-12">
-        <div className="shell max-w-3xl">
-          <p className="kicker">{ABOUT.kicker}</p>
-          <h1 className="display mt-3 text-4xl sm:text-5xl">{ABOUT.title}</h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed">{ABOUT.lead}</p>
+      <section className="border-b border-line">
+        <div className="shell grid items-end gap-10 py-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <CropFrame>
+            <img
+              src={founder.image}
+              alt={`創辦人${founder.name}`}
+              width={1100}
+              height={1122}
+              className="aspect-[4/5] w-full object-cover object-[center_18%]"
+            />
+          </CropFrame>
+          <div>
+            <p className="kicker">{founder.role}</p>
+            <h1 className="display mt-3 text-5xl sm:text-6xl">{founder.name}</h1>
+            <p className="mt-6 max-w-md text-lg leading-relaxed">{ABOUT.lead}</p>
+          </div>
         </div>
       </section>
 
@@ -32,65 +45,48 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="border-b border-line py-14">
+      <section id="stories" className="border-b border-line py-14">
         <div className="shell">
-          <p className="kicker">誰在做</p>
-          <h2 className="display mt-3 text-3xl">創辦人、業務、工務</h2>
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            {PEOPLE.map((person) => (
-              <article key={person.id}>
-                {person.image ? (
-                  <CropFrame>
-                    <img
-                      src={person.image}
-                      alt={person.name}
-                      width={800}
-                      height={1000}
-                      className="aspect-[3/4] w-full object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </CropFrame>
-                ) : (
-                  <div className="flex aspect-[3/4] items-end border border-line bg-bg-muted p-5">
-                    <p className="font-display text-2xl">{person.name}</p>
-                  </div>
-                )}
-                <p className="mt-4 text-base text-fg-muted">{person.role}</p>
-                <h3 className="font-display text-2xl">{person.name}</h3>
-                <p className="mt-2 text-base text-fg-muted">{person.bio}</p>
+          <p className="kicker">訪談</p>
+          <h2 className="display mt-3 text-3xl">同仁先講。屋主接著講。</h2>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+            {STORIES.filter((s) => s.image).map((item) => (
+              <article key={item.id}>
+                <a href={item.href || SITE.facebook} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    width={1200}
+                    height={675}
+                    className="aspect-video w-full object-cover"
+                    loading="lazy"
+                  />
+                </a>
+                <p className="mt-3 text-base text-seal">{item.kind}</p>
+                <h3 className="font-display text-xl">{item.title}</h3>
+                <p className="mt-2 text-base text-fg-muted">{item.note}</p>
               </article>
             ))}
           </div>
+          <p className="mt-8 max-w-xl text-base text-fg-muted">
+            台南屋主訪談下週拍攝。成片再補。
+          </p>
+          <Link to="/stories" className="mt-4 inline-block text-base no-underline hover:text-seal">
+            訪談頁 →
+          </Link>
         </div>
       </section>
 
       <section className="py-14">
-        <div className="shell">
-          <p className="kicker">一起做</p>
-          <h2 className="display mt-3 text-3xl">開會、聚餐、同一桌</h2>
-          <div className="mt-8 columns-1 gap-6 sm:columns-2">
-            {TEAM_PHOTOS.map((item) => (
-              <figure key={item.src} className="mb-6 break-inside-avoid">
-                <CropFrame>
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    width={1400}
-                    height={1050}
-                    className="w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </CropFrame>
-              </figure>
-            ))}
-          </div>
-          <div className="mt-10">
-            <Link to="/contact" className="btn btn-primary">
-              評估自家
-            </Link>
-          </div>
+        <div className="shell mb-6">
+          <p className="kicker">現場</p>
+          <h2 className="display mt-3 text-3xl">團體、業務、工務</h2>
+        </div>
+        <PhotoReel />
+        <div className="shell mt-10">
+          <Link to="/contact" hash="lead" className="btn btn-primary">
+            評估自家
+          </Link>
         </div>
       </section>
     </main>
