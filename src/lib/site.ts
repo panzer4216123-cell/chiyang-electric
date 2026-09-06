@@ -83,7 +83,7 @@ export const ABOUT = {
     {
       n: "02",
       title: "業務與工務成形",
-      body: "人多了，洪大姐把客人接進來；田大哥帶工務把現場做完。不是一個人扛全場。",
+      body: "人多了，黃大姐把客人接進來；田大哥帶工務把現場做完。不是一個人扛全場。",
     },
     {
       n: "03",
@@ -102,8 +102,8 @@ export const PEOPLE = [
     image: "/images/team/IMG_3584.webp",
   },
   {
-    id: "hung",
-    name: "洪大姐",
+    id: "huang",
+    name: "黃大姐",
     role: "業務",
     bio: "客人怎麼問、現場怎麼接，她把這條線接起來。",
     image: "",
