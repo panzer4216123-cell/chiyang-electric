@@ -1,17 +1,62 @@
+function mapsQuery(q: string) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+}
+
 export const SITE = {
   name: "啟揚機電",
   legalName: "啟揚機電有限公司",
   phoneDisplay: "07-353-8504",
   phoneTel: "+88673538504",
   faxDisplay: "07-353-5947",
+  freePhoneDisplay: "0800-000-362",
+  freePhoneTel: "0800000362",
   email: "chi.yang7039@gmail.com",
   address: "高雄市大社區民族路15-10號",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%B8%82%E5%A4%A7%E7%A4%BE%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF15-10%E8%99%9F",
+  mapsUrl: mapsQuery("高雄市大社區民族路15-10號"),
   formUrl: "https://forms.gle/uCqMDaTfuiHCuHvw8",
   facebook: "https://www.facebook.com/profile.php?id=100064054864315",
-  instagram: "https://www.instagram.com/chiyang7039.admin/",
+  instagram: "",
   reel: "https://www.facebook.com/reel/1033082013055204",
 } as const;
+
+export const LOCATIONS = [
+  {
+    id: "kh",
+    name: "高雄總公司",
+    address: "高雄市大社區民族路15-10號",
+    phoneDisplay: "07-353-8504",
+    phoneTel: "+88673538504",
+    faxDisplay: "07-353-5947",
+    mapsUrl: mapsQuery("高雄市大社區民族路15-10號"),
+  },
+  {
+    id: "tn",
+    name: "台南展銷中心",
+    address: "台南市永康區中山北路343號",
+    phoneDisplay: "06-231-3662",
+    phoneTel: "+88662313662",
+    faxDisplay: "06-231-9772",
+    mapsUrl: mapsQuery("台南市永康區中山北路343號"),
+  },
+  {
+    id: "tc",
+    name: "台中清水展銷中心",
+    address: "台中市清水區民族路三段63號1樓",
+    phoneDisplay: "",
+    phoneTel: "",
+    faxDisplay: "",
+    mapsUrl: mapsQuery("台中市清水區民族路三段63號1樓"),
+  },
+  {
+    id: "ty",
+    name: "桃園展銷中心",
+    address: "桃園市八德區仁德一路138號",
+    phoneDisplay: "",
+    phoneTel: "",
+    faxDisplay: "",
+    mapsUrl: mapsQuery("桃園市八德區仁德一路138號"),
+  },
+] as const;
 
 export const SLOGANS = {
   install: { line1: "電梯不好裝，", line2: "啟揚就來裝。" },

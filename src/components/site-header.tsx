@@ -40,9 +40,11 @@ export function SiteHeader() {
           <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="text-sm tracking-widest no-underline hover:text-seal">
             臉書
           </a>
-          <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="text-sm tracking-widest no-underline hover:text-seal">
-            IG
-          </a>
+          {SITE.instagram ? (
+            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="text-sm tracking-widest no-underline hover:text-seal">
+              IG
+            </a>
+          ) : null}
           <a href={`tel:${SITE.phoneTel}`} className="text-sm tracking-wide no-underline">
             {SITE.phoneDisplay}
           </a>
@@ -80,9 +82,11 @@ export function SiteHeader() {
             <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" className="border-b border-border py-3 no-underline">
               臉書日常
             </a>
-            <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="border-b border-border py-3 no-underline">
-              Instagram 施工
-            </a>
+            {SITE.instagram ? (
+              <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="border-b border-border py-3 no-underline">
+                Instagram 施工
+              </a>
+            ) : null}
             <a
               className="btn btn-primary mt-4"
               href={SITE.formUrl}

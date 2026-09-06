@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { SITE, SLOGANS } from "@/lib/site";
+import { LOCATIONS, SITE, SLOGANS } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -40,32 +40,33 @@ export function SiteFooter() {
                 臉書日常
               </a>
             </li>
-            <li>
-              <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                Instagram 施工
-              </a>
-            </li>
+            {SITE.instagram ? (
+              <li>
+                <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
+                  Instagram 施工
+                </a>
+              </li>
+            ) : null}
           </ul>
         </div>
         <div>
-          <p className="kicker text-fg-on-ink/40">公司</p>
-          <ul className="mt-4 space-y-3 text-sm text-fg-on-ink/80">
-            <li>
-              <a href={`tel:${SITE.phoneTel}`} className="no-underline hover:text-seal">
-                電話　{SITE.phoneDisplay}
-              </a>
-            </li>
-            <li>傳真　{SITE.faxDisplay}</li>
-            <li>
-              <a href={`mailto:${SITE.email}`} className="no-underline hover:text-seal">
-                {SITE.email}
-              </a>
-            </li>
-            <li>
-              <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
-                {SITE.address}
-              </a>
-            </li>
+          <p className="kicker text-fg-on-ink/40">據點</p>
+          <ul className="mt-4 space-y-4 text-sm text-fg-on-ink/80">
+            {LOCATIONS.map((loc) => (
+              <li key={loc.id}>
+                <p>{loc.name}</p>
+                <a href={loc.mapsUrl} target="_blank" rel="noopener noreferrer" className="no-underline hover:text-seal">
+                  {loc.address}
+                </a>
+                {loc.phoneDisplay ? (
+                  <p>
+                    <a href={`tel:${loc.phoneTel}`} className="no-underline hover:text-seal">
+                      {loc.phoneDisplay}
+                    </a>
+                  </p>
+                ) : null}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
