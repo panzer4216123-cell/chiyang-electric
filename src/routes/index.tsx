@@ -16,9 +16,9 @@ function Home() {
               空間窄、別家不接、地板不能大挖。先看這個家怎麼住，再談電梯怎麼放。
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a className="btn btn-primary" href={SITE.formUrl} target="_blank" rel="noopener noreferrer">
+              <Link to="/contact" hash="lead" className="btn btn-primary">
                 填需求表
-              </a>
+              </Link>
               <Link to="/cases" className="btn btn-ghost">
                 看現場
               </Link>
@@ -147,9 +147,9 @@ function Home() {
               {SITE.phoneDisplay}
             </a>
           </p>
-          <a className="btn btn-on-ink mt-8" href={SITE.formUrl} target="_blank" rel="noopener noreferrer">
+          <Link to="/contact" hash="lead" className="btn btn-on-ink mt-8">
             填需求表
-          </a>
+          </Link>
         </div>
       </section>
     </main>

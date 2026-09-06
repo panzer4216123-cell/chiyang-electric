@@ -14,10 +14,30 @@ export const SITE = {
   address: "高雄市大社區民族路15-10號",
   mapsUrl: mapsQuery("高雄市大社區民族路15-10號"),
   formUrl: "https://forms.gle/uCqMDaTfuiHCuHvw8",
+  formEmbed:
+    "https://docs.google.com/forms/d/e/1FAIpQLSc_x3GjKPbV5HJPzPIkE6RjVgxlVF9yDOQAufMpg62_97D3uQ/viewform",
+  formSourceEntry: "1632618831",
   facebook: "https://www.facebook.com/profile.php?id=100064054864315",
   instagram: "https://www.instagram.com/chiyang.elevator/",
   reel: "https://www.facebook.com/reel/1033082013055204",
+  line: "",
 } as const;
+
+export const LEAD_SOURCES = [
+  { id: "site", label: "官方網站", value: "啟揚官方網站" },
+  { id: "fb", label: "臉書", value: "Facebook 粉專" },
+  { id: "ig", label: "Instagram", value: "其他" },
+  { id: "google", label: "Google", value: "Google 搜尋" },
+  { id: "friend", label: "親友介紹", value: "親友或合作夥伴介紹" },
+] as const;
+
+export function formWithSource(sourceValue: string) {
+  const u = new URL(SITE.formEmbed);
+  u.searchParams.set("usp", "pp_url");
+  u.searchParams.set(`entry.${SITE.formSourceEntry}`, sourceValue);
+  u.searchParams.set("embedded", "true");
+  return u.toString();
+}
 
 export const LOCATIONS = [
   {

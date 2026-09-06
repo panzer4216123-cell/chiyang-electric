@@ -66,9 +66,9 @@ export function SiteHeader() {
           <a href={`tel:${SITE.phoneTel}`} className="text-base tracking-wide no-underline">
             {SITE.phoneDisplay}
           </a>
-          <a className="btn btn-primary" href={SITE.formUrl} target="_blank" rel="noopener noreferrer">
+          <Link to="/contact" hash="lead" className="btn btn-primary">
             填需求表
-          </a>
+          </Link>
         </div>
 
         <button
@@ -117,14 +117,9 @@ export function SiteHeader() {
                 Instagram
               </a>
             ) : null}
-            <a
-              className="btn btn-primary mt-4"
-              href={SITE.formUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to="/contact" hash="lead" className="btn btn-primary mt-4" onClick={() => setOpen(false)}>
               填需求表
-            </a>
+            </Link>
           </nav>
         </div>
       ) : null}

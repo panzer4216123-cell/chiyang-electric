@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Couplet } from "@/components/couplet";
 import { FacebookMark } from "@/components/facebook-mark";
 import { InstagramMark } from "@/components/instagram-mark";
+import { LeadForm } from "@/components/lead-form";
 import { LOCATIONS, SITE, SLOGANS, SURVEY } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
@@ -30,7 +31,7 @@ function ContactPage() {
             ))}
           </ol>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a className="btn btn-primary" href={SITE.formUrl} target="_blank" rel="noopener noreferrer">
+            <a className="btn btn-primary" href="#lead">
               填需求表
             </a>
             <a className="btn btn-ghost" href={`tel:${SITE.phoneTel}`}>
@@ -48,6 +49,8 @@ function ContactPage() {
           <p className="mt-2 text-base text-fg-muted">可行性與深度以現勘、圖說、合約為準。不是每戶都能少動地板。</p>
         </aside>
       </section>
+
+      <LeadForm />
 
       <section className="border-t border-line py-14">
         <div className="shell">
