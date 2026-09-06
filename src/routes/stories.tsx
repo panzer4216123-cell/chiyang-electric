@@ -27,20 +27,16 @@ function StoriesPage() {
             <article key={item.id}>
               {item.image ? (
                 <CropFrame>
-                  {item.href ? (
-                    <a href={item.href} target="_blank" rel="noopener noreferrer">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        width={1200}
-                        height={675}
-                        className="aspect-video w-full object-cover"
-                        loading="lazy"
-                      />
-                    </a>
-                  ) : (
-                    <img src={item.image} alt={item.title} className="aspect-video w-full object-cover" />
-                  )}
+                  <a href={item.href || SITE.facebook} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      width={1200}
+                      height={675}
+                      className="aspect-video w-full object-cover"
+                      loading="lazy"
+                    />
+                  </a>
                 </CropFrame>
               ) : (
                 <div className="flex aspect-video items-end border border-dashed border-line bg-bg-muted p-6">
