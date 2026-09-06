@@ -26,7 +26,7 @@ export const SITE = {
 export const LEAD_SOURCES = [
   { id: "site", label: "官方網站", value: "啟揚官方網站" },
   { id: "fb", label: "臉書", value: "Facebook 粉專" },
-  { id: "ig", label: "Instagram", value: "其他" },
+  { id: "ig", label: "Instagram", value: "Instagram" },
   { id: "google", label: "Google", value: "Google 搜尋" },
   { id: "friend", label: "親友介紹", value: "親友或合作夥伴介紹" },
 ] as const;
@@ -143,7 +143,7 @@ export const STORIES = [
     title: "啟揚同仁 EP.01｜徐景祥",
     note: "現場怎麼裝，工程師自己講。",
     image: "/images/stories/ep01-cover.webp",
-    href: "https://www.facebook.com/profile.php?id=100064054864315",
+    href: "https://www.facebook.com/reel/1033082013055204",
     status: "上架",
   },
   {
@@ -152,7 +152,7 @@ export const STORIES = [
     title: "啟揚同仁 EP.02｜王上萂",
     note: "在這行七年。保養、現場、客人怎麼問。",
     image: "/images/stories/ep02-cover.webp",
-    href: "https://www.facebook.com/profile.php?id=100064054864315",
+    href: "https://www.facebook.com/profile.php?id=100064054864315&sk=reels_tab",
     status: "上架",
   },
 ] as const;
@@ -190,7 +190,7 @@ export const PAINS = [
 
 export const STEPS = [
   { n: "01", title: "拍照傳圖", body: "樓梯、預計位置、各樓層出入口。沒有尺寸也可以先傳。" },
-  { n: "02", title: "說明能不能裝", body: "先講生活需求與現場限制，能做、不能做、下一步怎麼走。" },
+  { n: "02", title: "一起看能不能裝", body: "先講生活需求與現場限制。能做、不能做、下一步怎麼走，我們一起討論。" },
   { n: "03", title: "到府現勘", body: "結構、動線、出入口與施工界面，以現場為準。" },
   { n: "04", title: "圖說與合約", body: "規格、範圍、保養怎麼接，寫進文件再進場。" },
 ] as const;
