@@ -103,7 +103,9 @@ function Home() {
           </Link>
         </div>
         <div className="film pl-4 md:pl-[max(1rem,calc((100vw-1180px)/2+1rem))]">
-          {CASES.slice(0, 12).map((item) => (
+          {CASES.filter((item) => item.kind === "home" && !item.hidden)
+            .slice(0, 12)
+            .map((item) => (
             <Link key={item.id} to="/cases">
               <img src={item.image} alt={item.title} width={640} height={800} loading="lazy" decoding="async" />
               <div className="mt-3 flex items-center justify-between gap-2">

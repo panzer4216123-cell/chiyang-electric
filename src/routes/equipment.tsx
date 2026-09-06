@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CropFrame } from "@/components/crop-frame";
-import { CATALOG, SITE } from "@/lib/site";
+import { CATALOG, CASES, SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/equipment")({
   head: () => ({
@@ -17,10 +17,36 @@ function EquipmentPage() {
           <p className="kicker">設備型錄</p>
           <h1 className="display mt-3 max-w-2xl text-4xl sm:text-5xl">主機、門機、車廂</h1>
           <p className="mt-4 max-w-xl text-base text-fg-muted">
-            舊站乘客電梯型錄。規格、型號以現勘、圖說、合約為準，不以型錄推定。
+            主機、門機、車廂。規格以現勘、圖說、合約為準，不以型錄推定。
           </p>
         </div>
       </section>
+      {CASES.filter((item) => item.kind === "show").length ? (
+        <section className="shell mt-10">
+          <p className="kicker">展示設備</p>
+          <h2 className="display mt-3 text-3xl">公司展示梯</h2>
+          <div className="mt-8 columns-1 gap-8 sm:columns-2">
+            {CASES.filter((item) => item.kind === "show").map((item) => (
+              <article key={item.id} className="mb-10 break-inside-avoid">
+                <CropFrame>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    width={800}
+                    height={1000}
+                    className="w-full object-cover"
+                    loading="lazy"
+                  />
+                </CropFrame>
+                <div className="mt-3 flex items-center justify-between gap-3">
+                  <h3 className="font-display text-xl">{item.title}</h3>
+                  <span className="chop">{item.id}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <section className="shell mt-10 columns-1 gap-8 sm:columns-2">
         {CATALOG.map((item) => (
           <article key={item.id} className="mb-10 break-inside-avoid">

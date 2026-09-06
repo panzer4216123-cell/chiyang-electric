@@ -1,6 +1,7 @@
+import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CropFrame } from "@/components/crop-frame";
-import { CASES, SITE } from "@/lib/site";
+import { CASES, CASE_FILTERS, SITE, type CaseKind } from "@/lib/site";
 
 export const Route = createFileRoute("/cases")({
   head: () => ({
@@ -10,24 +11,42 @@ export const Route = createFileRoute("/cases")({
 });
 
 function CasesPage() {
+  const [kind, setKind] = useState<CaseKind>("home");
+  const list = useMemo(
+    () => CASES.filter((item) => !item.hidden && item.kind !== "show" && item.kind === kind),
+    [kind],
+  );
+
   return (
     <main id="main" className="pb-20">
       <section className="border-b border-line py-12">
         <div className="shell">
-          <p className="kicker">工程檔案</p>
-          <h1 className="display mt-3 max-w-2xl text-4xl sm:text-5xl">現場看得到，才拿得出去跟屋主講</h1>
+          <p className="kicker">工程現場</p>
+          <h1 className="display mt-3 max-w-2xl text-4xl sm:text-5xl">工程現場，依設備類型整理</h1>
           <p className="mt-4 max-w-xl text-base text-fg-muted">
-            舊站工程實績 {CASES.length} 案。匿名編號。只寫畫面看得見的。新案持續補上。
+            以案場編號呈現，只標照片看得到的做法。每戶條件以現勘、圖說與合約為準。
           </p>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {CASE_FILTERS.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className={kind === item.id ? "btn btn-primary" : "btn btn-ghost"}
+                onClick={() => setKind(item.id)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
       <section className="shell mt-10 columns-1 gap-8 sm:columns-2 lg:columns-3">
-        {CASES.map((item) => (
+        {list.map((item) => (
           <article key={item.id} id={item.id} className="mb-10 break-inside-avoid">
             <CropFrame>
               <img
                 src={item.image}
-                alt={`${item.id} ${item.title}`}
+                alt={item.title}
                 width={800}
                 height={1000}
                 className="w-full object-cover"
@@ -42,12 +61,13 @@ function CasesPage() {
           </article>
         ))}
       </section>
+      {list.length === 0 ? (
+        <p className="shell text-base text-fg-muted">這一類目前沒有可公開的照片。</p>
+      ) : null}
       <section className="border-t border-line py-12">
         <div className="shell flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <p className="max-w-xl text-base text-fg-muted">
-            業主隱私以編號處理。有新的完成面，補進這頁。規格、檢查、許可仍以個案文件為準。
-          </p>
-          <Link to="/contact" className="btn btn-primary">
+          <p className="max-w-xl text-base text-fg-muted">規格、檢查、許可仍以個案文件為準。</p>
+          <Link to="/contact" hash="lead" className="btn btn-primary">
             評估自家
           </Link>
         </div>
