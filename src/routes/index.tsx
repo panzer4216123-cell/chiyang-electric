@@ -9,18 +9,18 @@ function Home() {
   return (
     <main id="main">
       <section className="border-b border-line">
-        <div className="shell grid items-end gap-10 py-10 lg:grid-cols-[auto_1fr] lg:py-14">
-          <div>
+        <div className="shell grid items-end gap-6 py-8 lg:grid-cols-[auto_1fr] lg:gap-10 lg:py-14">
+          <div className="order-2 lg:order-1">
             <Couplet banner="舊透天加梯" right={SLOGANS.install.line1} left={SLOGANS.install.line2} />
-            <p className="mt-8 max-w-sm text-base text-fg-muted">
+            <p className="mt-6 max-w-sm text-base text-fg-muted lg:mt-8">
               空間窄、別家不接、地板不能大挖。先看這個家怎麼住，再談電梯怎麼放。
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" hash="lead" className="btn btn-primary">
-                填需求表
+                我家能不能裝
               </Link>
               <Link to="/cases" className="btn btn-ghost">
-                看現場
+                看現場照片
               </Link>
             </div>
             <p className="mt-6 text-base">
@@ -30,23 +30,25 @@ function Home() {
               </a>
             </p>
           </div>
-          <CropFrame>
-            <figure>
-              <img
-                src="/images/branded/qy-040-finished-qy-logo.webp"
-                alt="樓梯旁加裝電梯的完成畫面"
-                width={960}
-                height={1280}
-                className="h-[min(78vh,640px)] w-full object-cover"
-                fetchPriority="high"
-                decoding="async"
-              />
-              <figcaption className="flex items-center justify-between py-3 text-base text-fg-muted">
-                <span className="chop">QY-040</span>
-                <span>匿名工程 · 完成面</span>
-              </figcaption>
-            </figure>
-          </CropFrame>
+          <div className="order-1 lg:order-2">
+            <CropFrame>
+              <figure>
+                <img
+                  src="/images/branded/qy-040-finished-qy-logo.webp"
+                  alt="樓梯旁加裝電梯的完成畫面"
+                  width={960}
+                  height={1280}
+                  className="h-[min(46vh,360px)] w-full object-cover lg:h-[min(78vh,640px)]"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+                <figcaption className="flex items-center justify-between py-3 text-base text-fg-muted">
+                  <span className="chop">QY-040</span>
+                  <span>匿名工程 · 完成面</span>
+                </figcaption>
+              </figure>
+            </CropFrame>
+          </div>
         </div>
       </section>
 
