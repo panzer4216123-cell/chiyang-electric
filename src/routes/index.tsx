@@ -76,6 +76,12 @@ function Home() {
           </CropFrame>
           <div className="text-fg-on-ink">
             <Couplet banner="裝完也養" right={SLOGANS.maintain.line1} left={SLOGANS.maintain.line2} />
+            <p className="mt-8 max-w-xs text-base text-fg-on-ink/80">
+              保養、維修請直接打電話。下面的需求表是給新梯用的。
+            </p>
+            <a href={`tel:${SITE.phoneTel}`} className="btn btn-on-ink mt-5">
+              保養請來電
+            </a>
           </div>
         </div>
       </section>
@@ -121,7 +127,7 @@ function Home() {
         <div className="shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="kicker">怎麼開始</p>
-            <h2 className="display mt-3 text-3xl">四步，先說能不能裝</h2>
+            <h2 className="display mt-3 text-3xl">四步，先一起看能不能裝</h2>
           </div>
           <ol className="divide-y divide-line border-y border-line">
             {STEPS.map((step) => (
@@ -142,7 +148,7 @@ function Home() {
           <p className="kicker text-accent-fg/70">下一步</p>
           <h2 className="display mt-3 text-4xl">想裝電梯，先問啟揚</h2>
           <p className="mt-4 max-w-lg text-lg text-accent-fg/90">
-            留下房屋類型、樓層和照片。能裝、不能裝，我們講清楚。
+            留下房屋類型、樓層和照片。能不能裝，我們一起討論。
           </p>
           <p className="mt-8 font-display text-4xl tracking-wide sm:text-5xl">
             <a href={`tel:${SITE.phoneTel}`} className="no-underline">
