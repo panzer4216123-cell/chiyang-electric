@@ -38,6 +38,8 @@ function Home() {
                 width={960}
                 height={1280}
                 className="h-[min(78vh,640px)] w-full object-cover"
+                fetchPriority="high"
+                decoding="async"
               />
               <figcaption className="flex items-center justify-between py-3 text-xs tracking-widest text-fg-muted">
                 <span className="chop">QY-040</span>
@@ -64,6 +66,7 @@ function Home() {
               height={1477}
               className="h-[min(64vh,520px)] w-full object-cover"
               loading="lazy"
+              decoding="async"
             />
           </CropFrame>
           <div className="text-fg-on-ink">
@@ -103,7 +106,7 @@ function Home() {
         <div className="film pl-4 md:pl-[max(1rem,calc((100vw-1180px)/2+1rem))]">
           {CASES.map((item) => (
             <Link key={item.id} to="/cases">
-              <img src={item.image} alt={item.title} width={640} height={800} loading="lazy" />
+              <img src={item.image} alt={item.title} width={640} height={800} loading="lazy" decoding="async" />
               <div className="mt-3 flex items-center justify-between gap-2">
                 <span className="chop">{item.id}</span>
                 <span className="text-xs text-fg-muted">{item.title}</span>

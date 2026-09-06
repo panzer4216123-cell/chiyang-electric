@@ -32,6 +32,7 @@ function CasesPage() {
                 height={1000}
                 className="w-full object-cover"
                 loading="lazy"
+                decoding="async"
               />
             </CropFrame>
             <div className="mt-3 flex items-start justify-between gap-3">
