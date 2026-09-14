@@ -19,14 +19,14 @@ function AboutPage() {
           <CropFrame>
             <img
               src={founder.image}
-              alt={`創辦人${founder.name}`}
+              alt={founder.name}
               width={1100}
               height={1122}
               className="aspect-[4/5] w-full object-cover object-[center_18%]"
             />
           </CropFrame>
           <div>
-            <p className="kicker">{founder.role}</p>
+            {founder.role ? <p className="kicker">{founder.role}</p> : null}
             <h1 className="display mt-3 text-5xl sm:text-6xl">{founder.name}</h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed">{ABOUT.lead}</p>
           </div>

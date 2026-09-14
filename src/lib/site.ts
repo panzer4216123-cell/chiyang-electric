@@ -117,7 +117,7 @@ export const PEOPLE = [
   {
     id: "hong",
     name: "洪國峰",
-    role: "創辦人",
+    role: "",
     bio: "做電梯二十五年。前十五年在現場，後來開了啟揚，把電梯裝進已經住著的家。",
     image: "/images/team/hong-guofeng.webp",
   },
