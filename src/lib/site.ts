@@ -31,12 +31,13 @@ export const LEAD_SOURCES = [
   { id: "friend", label: "親友介紹", value: "親友或合作夥伴介紹" },
 ] as const;
 
-export function formWithSource(sourceValue: string, embedded = true) {
-  const u = new URL(SITE.formEmbed);
-  u.searchParams.set("usp", "pp_url");
-  u.searchParams.set(`entry.${SITE.formSourceEntry}`, sourceValue);
-  if (embedded) u.searchParams.set("embedded", "true");
-  return u.toString();
+export function formWithSource(_sourceValue: string, embedded = true) {
+  if (embedded) {
+    const u = new URL(SITE.formEmbed);
+    u.searchParams.set("embedded", "true");
+    return u.toString();
+  }
+  return SITE.formUrl;
 }
 
 export const LOCATIONS = [
