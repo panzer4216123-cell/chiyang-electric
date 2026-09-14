@@ -20,14 +20,11 @@ function ContactPage() {
           <p className="kicker">聯絡評估</p>
           <h1 className="display mt-3 text-4xl sm:text-5xl">先說這個家怎麼住</h1>
           <p className="mt-4 max-w-xl text-fg-muted">
-            先答這五句。照片有就更好。深度與能不能少動地板，以現勘為準。保養、維修請直接來電，不必填新梯表。
+            先填下面這張表。深度與能不能少動地板，以現勘為準。保養、維修請直接來電，不必填新梯表。
           </p>
-          <p className="mt-6 flex flex-wrap gap-3">
-            <a className="btn btn-primary" href={SITE.formUrl} target="_blank" rel="noopener noreferrer">
-              填需求表
-            </a>
+          <p className="mt-6">
             <a className="btn btn-ghost" href={`tel:${SITE.phoneTel}`}>
-              保養請來電
+              保養請來電 {SITE.phoneDisplay}
             </a>
           </p>
           <ol className="mt-8 divide-y divide-line border-y border-line">
@@ -38,17 +35,6 @@ function ContactPage() {
               </li>
             ))}
           </ol>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a className="btn btn-primary" href="#lead">
-              填新梯需求表
-            </a>
-            <a className="btn btn-ghost" href={`tel:${SITE.phoneTel}`}>
-              保養請來電
-            </a>
-            <a className="btn btn-ghost" href={`tel:${SITE.freePhoneTel}`}>
-              免付費 {SITE.freePhoneDisplay}
-            </a>
-          </div>
         </div>
         <aside className="border border-seal p-8">
           <Couplet right={SLOGANS.install.line1} left={SLOGANS.install.line2} />

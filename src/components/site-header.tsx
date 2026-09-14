@@ -63,9 +63,9 @@ export function SiteHeader() {
           <a href={`tel:${SITE.phoneTel}`} className="text-base tracking-wide no-underline">
             {SITE.phoneDisplay}
           </a>
-          <a href={SITE.formUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <Link to="/contact" hash="lead" className="btn btn-primary">
             我家能不能裝
-          </a>
+          </Link>
         </div>
       </div>
     </header>

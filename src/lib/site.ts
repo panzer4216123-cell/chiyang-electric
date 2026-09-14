@@ -16,7 +16,17 @@ export const SITE = {
   formUrl: "https://forms.gle/VZDNnvj8x47tnzg26",
   formEmbed:
     "https://docs.google.com/forms/d/e/1FAIpQLSd6ur0OILLTFKxpcYEiJ7SotQF8-nMuBnASbO-XkWKCK9_oFg/viewform",
-  formSourceEntry: "1632618831",
+  formAction:
+    "https://docs.google.com/forms/d/e/1FAIpQLSd6ur0OILLTFKxpcYEiJ7SotQF8-nMuBnASbO-XkWKCK9_oFg/formResponse",
+  formEntries: {
+    name: "entry.1632618831",
+    phone: "entry.2030024951",
+    city: "entry.734794520",
+    floors: "entry.1149877322",
+    house: "entry.505018862",
+    photo: "entry.2095031739",
+    source: "entry.906323932",
+  },
   facebook: "https://www.facebook.com/profile.php?id=100064054864315",
   instagram: "https://www.instagram.com/chiyang.elevator/",
   reel: "https://www.facebook.com/reel/1033082013055204",
@@ -24,12 +34,15 @@ export const SITE = {
 } as const;
 
 export const LEAD_SOURCES = [
-  { id: "site", label: "官方網站", value: "啟揚官方網站" },
-  { id: "fb", label: "臉書", value: "Facebook 粉專" },
+  { id: "site", label: "官方網站", value: "官方網站" },
+  { id: "fb", label: "臉書", value: "臉書" },
   { id: "ig", label: "Instagram", value: "Instagram" },
-  { id: "google", label: "Google", value: "Google 搜尋" },
-  { id: "friend", label: "親友介紹", value: "親友或合作夥伴介紹" },
+  { id: "google", label: "Google", value: "Google" },
+  { id: "friend", label: "親友介紹", value: "親友介紹" },
+  { id: "other", label: "其他", value: "其他" },
 ] as const;
+
+export const HOUSE_TYPES = ["透天", "公寓", "其他"] as const;
 
 export function formWithSource(_sourceValue: string, embedded = true) {
   if (embedded) {
