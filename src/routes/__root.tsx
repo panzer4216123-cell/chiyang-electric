@@ -18,6 +18,7 @@ export const Route = createRootRoute({
         content: "舊透天、空間窄、地板不能大挖。電梯不好裝，啟揚就來裝；不好養，啟揚就來養。",
       },
       { name: "theme-color", content: "#f3eee4" },
+      { name: "robots", content: "noindex, nofollow" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

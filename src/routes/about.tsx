@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CropFrame } from "@/components/crop-frame";
 import { PhotoReel } from "@/components/photo-reel";
-import { ABOUT, PEOPLE, SITE, STORIES } from "@/lib/site";
+import { ABOUT, SITE, STORIES } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -11,23 +11,22 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
-  const founder = PEOPLE[0];
   return (
     <main id="main" className="pb-20">
       <section className="border-b border-line">
         <div className="shell grid items-end gap-10 py-12 lg:grid-cols-[0.9fr_1.1fr]">
           <CropFrame>
             <img
-              src={founder.image}
-              alt={founder.name}
+              src="/images/branded/qy-040-finished-qy-logo.webp"
+              alt="樓梯旁加裝電梯的完成畫面"
               width={1100}
               height={1122}
-              className="aspect-[4/5] w-full object-cover object-[center_18%]"
+              className="aspect-[4/5] w-full object-cover"
             />
           </CropFrame>
           <div>
-            {founder.role ? <p className="kicker">{founder.role}</p> : null}
-            <h1 className="display mt-3 text-5xl sm:text-6xl">{founder.name}</h1>
+            <p className="kicker">{ABOUT.kicker}</p>
+            <h1 className="display mt-3 text-5xl sm:text-6xl">{ABOUT.title}</h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed">{ABOUT.lead}</p>
           </div>
         </div>
@@ -65,6 +64,14 @@ function AboutPage() {
                 <p className="mt-3 text-base text-seal">{item.kind}</p>
                 <h3 className="font-display text-xl">{item.title}</h3>
                 <p className="mt-2 text-base text-fg-muted">{item.note}</p>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block text-base no-underline hover:text-seal"
+                >
+                  看這支影片 →
+                </a>
               </article>
             ))}
           </div>
