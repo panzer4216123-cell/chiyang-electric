@@ -13,9 +13,9 @@ export const SITE = {
   email: "chi.yang7039@gmail.com",
   address: "高雄市大社區民族路15-10號",
   mapsUrl: mapsQuery("高雄市大社區民族路15-10號"),
-  formUrl: "https://forms.gle/uCqMDaTfuiHCuHvw8",
+  formUrl: "https://forms.gle/VZDNnvj8x47tnzg26",
   formEmbed:
-    "https://docs.google.com/forms/d/e/1FAIpQLSc_x3GjKPbV5HJPzPIkE6RjVgxlVF9yDOQAufMpg62_97D3uQ/viewform",
+    "https://docs.google.com/forms/d/e/1FAIpQLSd6ur0OILLTFKxpcYEiJ7SotQF8-nMuBnASbO-XkWKCK9_oFg/viewform",
   formSourceEntry: "1632618831",
   facebook: "https://www.facebook.com/profile.php?id=100064054864315",
   instagram: "https://www.instagram.com/chiyang.elevator/",
