@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Couplet } from "@/components/couplet";
 import { CropFrame } from "@/components/crop-frame";
-import { CASES, SITE, SLOGANS, STEPS, STORY } from "@/lib/site";
+import { StoryCard } from "@/components/story-card";
+import { CASES, CUSTOMER_STORIES, SITE, SLOGANS, STEPS, STORY } from "@/lib/site";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -48,6 +49,19 @@ function Home() {
                 </figcaption>
               </figure>
             </CropFrame>
+          </div>
+        </div>
+      </section>
+
+      <section id="customer-stories" className="border-b border-line py-16">
+        <div className="shell">
+          <p className="kicker">顧客訪談</p>
+          <h2 className="display mt-3 text-3xl sm:text-4xl">屋主怎麼講</h2>
+          <p className="mt-4 max-w-xl text-base text-fg-muted">影片在臉書。點卡片看原片。</p>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+            {CUSTOMER_STORIES.map((item) => (
+              <StoryCard key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </section>

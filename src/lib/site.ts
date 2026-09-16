@@ -180,6 +180,9 @@ export const STORIES = [
   },
 ] as const;
 
+export const CUSTOMER_STORIES = STORIES.filter((item) => item.kind === "顧客");
+export const TEAM_STORIES = STORIES.filter((item) => item.kind === "同仁");
+
 export const SURVEY = [
   "幾樓到幾樓",
   "梯放樓梯中間、旁邊，還是室外",

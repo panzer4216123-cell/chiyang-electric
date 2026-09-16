@@ -38,8 +38,13 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/" hash="customer-stories" className="no-underline hover:text-seal">
+                顧客訪談
+              </Link>
+            </li>
+            <li>
               <Link to="/about" hash="stories" className="no-underline hover:text-seal">
-                訪談
+                同仁訪談
               </Link>
             </li>
             <li>

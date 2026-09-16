@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CropFrame } from "@/components/crop-frame";
 import { PhotoReel } from "@/components/photo-reel";
-import { ABOUT, SITE, STORIES } from "@/lib/site";
+import { StoryCard } from "@/components/story-card";
+import { ABOUT, SITE, TEAM_STORIES } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -46,33 +47,11 @@ function AboutPage() {
 
       <section id="stories" className="border-b border-line py-14">
         <div className="shell">
-          <p className="kicker">訪談</p>
-          <h2 className="display mt-3 text-3xl">屋主與同仁</h2>
+          <p className="kicker">同仁訪談</p>
+          <h2 className="display mt-3 text-3xl">同仁怎麼講</h2>
           <div className="mt-8 grid gap-8 sm:grid-cols-2">
-            {STORIES.filter((s) => s.image).map((item) => (
-              <article key={item.id}>
-                <a href={item.href || SITE.facebook} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    width={1200}
-                    height={675}
-                    className="aspect-video w-full object-cover"
-                    loading="lazy"
-                  />
-                </a>
-                <p className="mt-3 text-base text-seal">{item.kind}</p>
-                <h3 className="font-display text-xl">{item.title}</h3>
-                <p className="mt-2 text-base text-fg-muted">{item.note}</p>
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-block text-base no-underline hover:text-seal"
-                >
-                  看這支影片 →
-                </a>
-              </article>
+            {TEAM_STORIES.map((item) => (
+              <StoryCard key={item.id} item={item} />
             ))}
           </div>
         </div>
