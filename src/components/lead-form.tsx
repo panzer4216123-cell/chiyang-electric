@@ -6,16 +6,22 @@ const fieldClass = "mt-1 w-full border border-line bg-bg px-3 py-3 text-base";
 export function LeadForm() {
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [fail, setFail] = useState(false);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
     setBusy(true);
+    setFail(false);
     try {
       await fetch(SITE.formAction, { method: "POST", mode: "no-cors", body: new FormData(form) });
       setSent(true);
     } catch {
-      form.submit();
+      setFail(true);
     } finally {
       setBusy(false);
     }
@@ -27,10 +33,10 @@ export function LeadForm() {
         <p className="kicker">需求表</p>
         <h2 className="display mt-3 text-3xl">在這頁填即可</h2>
         <p className="mt-4 max-w-xl text-base text-fg-muted">
-          姓名、電話、樓層。照片之後再傳。這份只收新梯需求。保養、維修請直接打電話。
+          姓名、電話、縣市、樓層、房屋類型。照片之後再傳。這份只收新梯需求。保養、維修請直接打電話。
         </p>
         {sent ? (
-          <p className="mt-8 max-w-xl text-lg">已收到。啟揚會先看需求，再與你聯絡。不是報價，能不能裝以現勘為準。</p>
+          <p className="mt-8 max-w-xl text-lg">已送到。啟揚會先看需求，再與你聯絡。不是報價，能不能裝以現勘為準。沒人回請打 {SITE.phoneDisplay}。</p>
         ) : (
           <form className="mt-8 max-w-xl space-y-5" action={SITE.formAction} method="post" onSubmit={onSubmit}>
             <label className="block">
@@ -43,11 +49,11 @@ export function LeadForm() {
             </label>
             <label className="block">
               縣市／區域
-              <input className={fieldClass} name={SITE.formEntries.city} placeholder="例：高雄市大社區" />
+              <input className={fieldClass} name={SITE.formEntries.city} required placeholder="例：高雄市大社區" />
             </label>
             <label className="block">
               幾樓到幾樓
-              <input className={fieldClass} name={SITE.formEntries.floors} placeholder="例：1到3樓" />
+              <input className={fieldClass} name={SITE.formEntries.floors} required placeholder="例：1到3樓" />
             </label>
             <fieldset>
               <legend>房屋類型</legend>
@@ -69,12 +75,13 @@ export function LeadForm() {
               <div className="mt-2 flex flex-wrap gap-3">
                 {LEAD_SOURCES.map((item) => (
                   <label key={item.id} className="inline-flex items-center gap-2">
-                    <input type="radio" name={SITE.formEntries.source} value={item.value} />
+                    <input type="radio" name={SITE.formEntries.source} value={item.value} required defaultChecked={item.id === "site"} />
                     {item.label}
                   </label>
                 ))}
               </div>
             </fieldset>
+            {fail ? <p className="text-seal">沒送出。請再送一次，或直接打電話 {SITE.phoneDisplay}。</p> : null}
             <p className="flex flex-wrap gap-3">
               <button className="btn btn-primary" type="submit" disabled={busy}>
                 {busy ? "送出中" : "送出需求"}
