@@ -15,8 +15,8 @@ function StoriesPage() {
       <section className="border-b border-line py-12">
         <div className="shell max-w-3xl">
           <p className="kicker">訪談</p>
-          <h1 className="display mt-3 text-4xl sm:text-5xl">同仁先講</h1>
-          <p className="mt-4 max-w-xl text-lg text-fg-muted">影片在臉書。</p>
+          <h1 className="display mt-3 text-4xl sm:text-5xl">屋主與同仁</h1>
+          <p className="mt-4 max-w-xl text-lg text-fg-muted">影片在臉書。點卡片看原片。</p>
         </div>
       </section>
       <section className="shell py-12">
@@ -39,7 +39,7 @@ function StoriesPage() {
               <h2 className="font-display text-2xl">{item.title}</h2>
               <p className="mt-2 text-base text-fg-muted">{item.note}</p>
               <a href={item.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-base no-underline hover:text-seal">
-                去臉書看 →
+                看這支影片 →
               </a>
             </article>
           ))}

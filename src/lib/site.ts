@@ -152,6 +152,15 @@ export const TEAM_PHOTOS = [
 
 export const STORIES = [
   {
+    id: "customer-01",
+    kind: "顧客",
+    title: "顧客訪談｜三四樓、樓梯窄",
+    note: "搬東西跌倒過。家有長輩與小孩要上下樓。影片在臉書。",
+    image: "/images/stories/customer-01-cover.webp",
+    href: "https://www.facebook.com/reel/2047082872592579",
+    status: "上架",
+  },
+  {
     id: "ep01",
     kind: "同仁",
     title: "啟揚同仁 EP.01｜徐景祥",

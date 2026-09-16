@@ -47,7 +47,7 @@ function AboutPage() {
       <section id="stories" className="border-b border-line py-14">
         <div className="shell">
           <p className="kicker">訪談</p>
-          <h2 className="display mt-3 text-3xl">同仁怎麼講</h2>
+          <h2 className="display mt-3 text-3xl">屋主與同仁</h2>
           <div className="mt-8 grid gap-8 sm:grid-cols-2">
             {STORIES.filter((s) => s.image).map((item) => (
               <article key={item.id}>
