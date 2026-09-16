@@ -27,6 +27,7 @@ function AboutPage() {
           </CropFrame>
           <div>
             <p className="kicker">{ABOUT.kicker}</p>
+            <p className="mt-3 text-base tracking-wide text-fg-muted">{ABOUT.founded}</p>
             <h1 className="display mt-3 text-5xl sm:text-6xl">{ABOUT.title}</h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed">{ABOUT.lead}</p>
           </div>

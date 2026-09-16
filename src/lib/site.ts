@@ -106,6 +106,7 @@ export const STORY = {
 
 export const ABOUT = {
   kicker: "關於啟揚",
+  founded: "2016年設立",
   title: "別家說裝不了的家，我們來看現場。",
   lead: "這不是樣品屋。是已經住進去的透天：樓梯窄、位置怪、地板不能大挖。先看這個家怎麼住，能裝才說怎麼裝。裝完，保養也找我們。",
   stages: [
