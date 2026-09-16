@@ -43,11 +43,6 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link to="/about" hash="stories" className="no-underline hover:text-seal">
-                同仁訪談
-              </Link>
-            </li>
-            <li>
               <Link to="/equipment" className="no-underline hover:text-seal">
                 設備型錄
               </Link>
