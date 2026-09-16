@@ -243,6 +243,31 @@
     border-width: 0 1px 1px 0;
   }
 
+  .play-mark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    display: grid;
+    width: 4rem;
+    height: 4rem;
+    margin: -2rem 0 0 -2rem;
+    place-items: center;
+    border-radius: 999px;
+    background: color-mix(in oklab, #141414 58%, transparent);
+    pointer-events: none;
+  }
+
+  .play-mark-tri {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: 0.2rem;
+    border-style: solid;
+    border-width: 0.7rem 0 0.7rem 1.15rem;
+    border-color: transparent transparent transparent #f3eee4;
+  }
+
   .sheet {
     border: 1px solid var(--color-line);
     background: var(--color-bg-elevated);
