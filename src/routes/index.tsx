@@ -4,6 +4,23 @@ import { CropFrame } from "@/components/crop-frame";
 import { StoryCard } from "@/components/story-card";
 import { CASES, CUSTOMER_STORIES, SITE, SLOGANS, STEPS, STORY } from "@/lib/site";
 
+const GOOGLE_REVIEWS = "https://share.google/dx4wRMGVIFd4VxKNO";
+
+const REVIEW_EXCERPTS = [
+  {
+    name: "張Wei",
+    body: "規劃專業、施工細謹。找啟揚機電做電梯規劃設計和安裝，整體體驗非常好。溝通順暢、回覆速度快，而且施工品質非常扎實，細節處理得很好。",
+  },
+  {
+    name: "鍾佳真",
+    body: "專業度滿分。服務人員態度非常親切，從接洽到施工、保養都讓人很安心。",
+  },
+  {
+    name: "管一針",
+    body: "業務不只專業在線，人也超級好溝通。遇到不懂的複雜線路或設備，都能用最白話的方式解釋。",
+  },
+];
+
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
@@ -63,6 +80,27 @@ function Home() {
               <StoryCard key={item.id} item={item} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-line py-16">
+        <div className="shell">
+          <p className="kicker">Google 評論</p>
+          <h2 className="display mt-3 text-3xl sm:text-4xl">5.0 · 105 則評論</h2>
+          <p className="mt-4 max-w-xl text-base text-fg-muted">
+            分數與則數以 Google 商家頁為準。下面只摘三則原文。
+          </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            {REVIEW_EXCERPTS.map((item) => (
+              <blockquote key={item.name} className="border border-line p-5">
+                <p className="text-base leading-relaxed">{item.body}</p>
+                <footer className="mt-4 text-base text-fg-muted">{item.name} · Google 五星</footer>
+              </blockquote>
+            ))}
+          </div>
+          <a href={GOOGLE_REVIEWS} className="btn btn-ghost mt-8" target="_blank" rel="noreferrer">
+            看全部評價
+          </a>
         </div>
       </section>
 
