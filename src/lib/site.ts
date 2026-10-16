@@ -5,6 +5,7 @@ function mapsQuery(q: string) {
 export const SITE = {
   name: "啟揚機電",
   legalName: "啟揚機電有限公司",
+  officialUrl: "https://www.chiyang7039.com/",
   phoneDisplay: "07-353-8504",
   phoneTel: "+88673538504",
   faxDisplay: "07-353-5947",
@@ -95,7 +96,11 @@ export const LOCATIONS = [
 export const SLOGANS = {
   install: { line1: "電梯不好裝，", line2: "啟揚就來裝。" },
   maintain: { line1: "電梯不好養，", line2: "啟揚就來養。" },
-  floor: { line1: "地板不能挖，", line2: "啟揚有辦法。" },
+  floor: {
+    line1: "地板不能挖，",
+    line2: "啟揚有辦法。",
+    note: "以現勘為準，不是每戶都能少動地板。",
+  },
 } as const;
 
 export const STORY = {
@@ -132,7 +137,7 @@ export const PEOPLE = [
   {
     id: "hong",
     name: "洪國峰",
-    role: "",
+    role: "創辦人",
     bio: "做電梯二十五年。前十五年在現場，後來開了啟揚，把電梯裝進已經住著的家。",
     image: "/images/team/hong-guofeng.webp",
   },

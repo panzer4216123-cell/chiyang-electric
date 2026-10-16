@@ -40,7 +40,7 @@ function ContactPage() {
           <Couplet right={SLOGANS.install.line1} left={SLOGANS.install.line2} />
           <p className="mt-8 text-base text-fg-muted">新梯不好裝，來看現場。裝完不好養，保養也找我們。</p>
           <p className="mt-3 font-display text-lg">{SLOGANS.floor.line1}{SLOGANS.floor.line2}</p>
-          <p className="mt-2 text-base text-fg-muted">可行性與深度以現勘、圖說、合約為準。不是每戶都能少動地板。</p>
+          <p className="mt-2 text-base text-fg-muted">{SLOGANS.floor.note}</p>
         </aside>
       </section>
 
@@ -80,6 +80,12 @@ function ContactPage() {
             　免付費{" "}
             <a href={`tel:${SITE.freePhoneTel}`} className="no-underline">
               {SITE.freePhoneDisplay}
+            </a>
+          </p>
+          <p className="mt-3 text-base text-fg-muted">
+            正式網站{" "}
+            <a href={SITE.officialUrl} className="no-underline">
+              {SITE.officialUrl}
             </a>
           </p>
         </div>

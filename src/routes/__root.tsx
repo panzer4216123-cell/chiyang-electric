@@ -4,7 +4,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteDock } from "@/components/site-dock";
-import { SITE } from "@/lib/site";
+import { SITE, SLOGANS } from "@/lib/site";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -15,7 +15,7 @@ export const Route = createRootRoute({
       { title: `住宅加梯｜${SITE.name}` },
       {
         name: "description",
-        content: "舊透天、空間窄、地板不能大挖。電梯不好裝，啟揚就來裝；不好養，啟揚就來養。",
+        content: `舊透天、空間窄、地板不能大挖。${SLOGANS.install.line1}${SLOGANS.install.line2}${SLOGANS.maintain.line1}${SLOGANS.maintain.line2}`,
       },
       { name: "theme-color", content: "#f3eee4" },
       { name: "robots", content: "noindex, nofollow" },

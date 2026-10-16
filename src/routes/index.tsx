@@ -147,7 +147,7 @@ function Home() {
             {SLOGANS.floor.line2}
           </p>
           <p className="mt-4 max-w-lg text-base text-fg-muted">
-            怕動防水、怕挖太深、怕把家拆掉。深度與做法以現勘為準。不是每戶都能少動地板。
+            {SLOGANS.floor.note}
           </p>
         </div>
       </section>
